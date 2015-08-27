@@ -29,12 +29,8 @@ public slots:
     void pinPopup(bool);
 
 protected:
-  virtual void leaveEvent(QEvent* event);
-  virtual void enterEvent(QEvent* event);
-  virtual bool eventFilter(QObject* obj, QEvent* event);
-  virtual void setBaseWidget(QWidget* baseWidget);    
-
-protected slots:
-  void updatePopup();
-  virtual void onEffectFinished();  
+    virtual void leaveEvent(QEvent* event);
+    virtual void enterEvent(QEvent* event);
+    virtual bool eventFilter(QObject* obj, QEvent* event);
+    virtual void setBaseWidget(QWidget* baseWidget);    
 };
