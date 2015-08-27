@@ -9,6 +9,10 @@ QT       += widgets
 TARGET = CTK
 TEMPLATE = lib
 
+win32 {
+	CONFIG += staticlib	
+}
+
 DEFINES += CTK_LIBRARY
 
 SOURCES += ctkPopupWidget.cpp \
@@ -23,8 +27,4 @@ HEADERS += ctkPopupWidget.h\
 unix {
     target.path = /usr/lib
     INSTALLS += target
-}
-
-win32 {
-	CONFIG += staticlib
 }

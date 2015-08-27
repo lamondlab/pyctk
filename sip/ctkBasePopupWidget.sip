@@ -5,15 +5,15 @@ class ctkBasePopupWidget : QFrame {
 %End
 
 public:
-	ctkBasePopupWidget(QWidget *parent /TransferThis/ = 0);
-	~ctkBasePopupWidget();
+    ctkBasePopupWidget(QWidget *parent /TransferThis/ = 0);
+    ~ctkBasePopupWidget();
 
-	QWidget* baseWidget() const;
+    QWidget* baseWidget() const;
 
-	enum AnimationEffect
+    enum AnimationEffect
     {
-    	WindowOpacityFadeEffect,
-    	ScrollEffect,
+        WindowOpacityFadeEffect,
+        ScrollEffect,
         FadeEffect
     };
 
@@ -29,34 +29,28 @@ public:
     void setOrientation(Qt::Orientations);
 
     enum VerticalDirection{
-	    TopToBottom,
-	    BottomToTop
-  	};
+        TopToBottom,
+        BottomToTop
+    };
 
-  	VerticalDirection verticalDirection() const;
-	void setVerticalDirection(VerticalDirection);
-	Qt::LayoutDirection horizontalDirection() const;
-	void setHorizontalDirection(Qt::LayoutDirection);
+    VerticalDirection verticalDirection() const;
+    void setVerticalDirection(VerticalDirection);
+    Qt::LayoutDirection horizontalDirection() const;
+    void setHorizontalDirection(Qt::LayoutDirection);
 
 public slots:
-  virtual void hidePopup();
-  virtual void showPopup();
-  void showPopup(bool);
+    virtual void hidePopup();
+    virtual void showPopup();
+    void showPopup(bool);
 
 signals:
-  void popupOpened(bool);
+    void popupOpened(bool);
 
 protected:
-  double effectAlpha() const;
-  QRect effectGeometry() const;
+    double effectAlpha() const;
+    QRect effectGeometry() const;
 
-  virtual void setBaseWidget(QWidget* baseWidget);
-  virtual bool event(QEvent* event);
-  virtual void paintEvent(QPaintEvent*);
-
-protected Q_SLOTS:
-  virtual void onEffectFinished();
-  void setEffectAlpha(double);
-  void setEffectGeometry(QRect);
-  void onBaseWidgetDestroyed();	
+    virtual void setBaseWidget(QWidget* baseWidget);
+    virtual bool event(QEvent* event);
+    virtual void paintEvent(QPaintEvent*);
 };

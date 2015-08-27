@@ -156,6 +156,7 @@ if __name__=="__main__":
         ]
         makefile.extra_lib_dirs+=[os.path.join('..','src','release')]
         makefile.extra_libs+=['Qt5Core','Qt5Gui','Qt5Widgets']
+        makefile.extra_lflags+=['/IGNORE:4217,4049']
 
     makefile.generate()
 
