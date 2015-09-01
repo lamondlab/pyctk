@@ -9,4 +9,5 @@ namespace ctk
 %End
 
 	int significantDecimals(double value, int defaultDecimals = -1);
+
 };

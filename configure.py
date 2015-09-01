@@ -118,6 +118,7 @@ if __name__=="__main__":
             pyqt_config['sip_flags'],
             sip_args,
             '-I', sip_files_dir,
+            '-I', os.path.join(sip_files_dir, entry),
             '-I', py_sip_dir,
             '-I', config.sip_inc_dir,
             '-I', inc_dir,
@@ -174,9 +175,10 @@ if __name__=="__main__":
                 os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtGui"),
                 os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtWidgets"),
             ]
-            makefile.extra_lib_dirs+=[os.path.join('..','src',entry,'release')]
+            makefile.extra_lib_dirs+=[os.path.join('..','..','src',entry,'release')]
             makefile.extra_libs+=['Qt5Core','Qt5Gui','Qt5Widgets']
             makefile.extra_lflags+=['/IGNORE:4217,4049']
+            makefile.extra_lflags+=['/LIBPATH:{}'.format(os.path.join('..','..','src',entry,'release'))]
 
         makefile.generate()
 
