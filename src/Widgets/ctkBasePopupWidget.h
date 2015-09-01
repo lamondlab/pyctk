@@ -7,8 +7,7 @@
 #include <QMetaType>
 
 // CTK includes
-//#include "ctkWidgetsExport.h"
-#include "ctkpopupwidget_global.h"
+#include "ctkExport.h"
 
 class ctkBasePopupWidgetPrivate;
 
@@ -20,7 +19,7 @@ class ctkBasePopupWidgetPrivate;
 /// closing of the popup.
 /// See ctkPopupWidget for an automatic control of its opening and closing.
 /// \sa baseWidget(), animationEffect, ctkPopupWidget
-class CTK_WIDGETS_EXPORT ctkBasePopupWidget : public QFrame
+class CTK_EXPORT ctkBasePopupWidget : public QFrame
 {
   Q_OBJECT
 

@@ -12,7 +12,7 @@ class QPropertyAnimation;
 
 // -------------------------------------------------------------------------
 /// \ingroup Widgets
-class CTK_WIDGETS_EXPORT ctkBasePopupWidgetPrivate
+class CTK_EXPORT ctkBasePopupWidgetPrivate
   : public QObject
 {
   Q_OBJECT
