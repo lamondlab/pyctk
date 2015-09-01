@@ -7,7 +7,7 @@
 
 // -------------------------------------------------------------------------
 /// \ingroup Widgets
-class CTK_WIDGETS_EXPORT ctkPopupWidgetPrivate
+class CTK_EXPORT ctkPopupWidgetPrivate
   : public ctkBasePopupWidgetPrivate
 {
   Q_OBJECT

@@ -20,7 +20,7 @@ class ctkPopupWidgetPrivate;
 /// popupLayout->addWidget(popupSlider);
 /// \endcode
 /// \sa ctkBasePopupWidget
-class CTK_WIDGETS_EXPORT ctkPopupWidget : public ctkBasePopupWidget
+class CTK_EXPORT ctkPopupWidget : public ctkBasePopupWidget
 {
   Q_OBJECT
 

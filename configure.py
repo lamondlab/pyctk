@@ -88,87 +88,114 @@ if __name__=="__main__":
     dest_pkg_dir="PyCTK"
 
     sip_files_dir=os.path.abspath(os.path.join(".","sip"))
-    output_dir =os.path.abspath(os.path.join(".", "modules"))
-    build_file="PyCTK.sbf"
-    build_path = os.path.join(output_dir, build_file)
-      
-    if not os.path.exists(output_dir): os.mkdir(output_dir)
-    sip_file = os.path.join(sip_files_dir, "PyCTK.sip")
 
     config=sipconfig.Configuration()    
     config.default_mod_dir=( "/usr/local/lib/python%i.%i/dist-packages" %
                                ( sys.version_info.major, sys.version_info.minor ) )
 
-    cmd=" ".join([
-        config.sip_bin,
-        pyqt_config['sip_flags'],
-        sip_args,
-        '-I', sip_files_dir,
-        '-I', py_sip_dir,
-        '-I', config.sip_inc_dir,
-        '-I', inc_dir,
-        "-c", output_dir,
-        "-b", build_path,
-        "-w",
-        "-o",
-        sip_file,
-    ])
+    output_dirs=[]
 
-    print(cmd)
-    if os.system(cmd)!=0: sys.exit(1)
+    ### Make Each Module
+    for entry in os.listdir(sip_files_dir):
+        fpath=os.path.abspath(os.path.join(sip_files_dir, entry))
+        if not os.path.isdir(fpath): continue
 
-    makefile=sipconfig.SIPModuleMakefile(
-        config,
-        build_file,
-        dir=output_dir,
-        install_dir=dest_pkg_dir
-    )
+        print()
+        print("######################################################"+'#'*len(entry))
+        print("# Generating C++ wrapper and creating Makefile for: {} #".format(entry))
+        print("######################################################"+'#'*len(entry))
+        print()
 
-    makefile.extra_defines+=['MYLABEL_LIBRARY','QT_CORE_LIB', 'QT_GUI_LIB', 'QT_WIDGETS_LIB']
-    makefile.extra_include_dirs+=[os.path.abspath(inc_dir), qtconfig.QT_INSTALL_HEADERS]
-    makefile.extra_lib_dirs+=[qtconfig.QT_INSTALL_LIBS, os.path.join('..','src')]
-    makefile.extra_libs+=['CTK']
+        output_dir =os.path.abspath(os.path.join(".", "modules", entry))
+        build_file="{}.sbf".format(entry)
+        build_path = os.path.join(output_dir, build_file)
+          
+        if not os.path.exists(output_dir): os.makedirs(output_dir)
+        sip_file = os.path.join(fpath, "{}.sip".format(entry))
 
-    if sys.platform=='darwin':
-        makefile.extra_cxxflags+=['-F'+qtconfig.QT_INSTALL_LIBS]        
+        cmd=" ".join([
+            config.sip_bin,
+            pyqt_config['sip_flags'],
+            sip_args,
+            '-I', sip_files_dir,
+            '-I', py_sip_dir,
+            '-I', config.sip_inc_dir,
+            '-I', inc_dir,
+            "-c", output_dir,
+            "-b", build_path,
+            "-w",
+            "-o",
+            sip_file,
+        ])
+
+        print(cmd)
+
+        if os.system(cmd)!=0: sys.exit(1)
+    
+        makefile=sipconfig.SIPModuleMakefile(
+            config,
+            build_file,
+            dir=output_dir,
+            install_dir=dest_pkg_dir
+        )
+
+        makefile.extra_defines+=['MYLABEL_LIBRARY','QT_CORE_LIB', 'QT_GUI_LIB', 'QT_WIDGETS_LIB']
         makefile.extra_include_dirs+=[
-            os.path.join(qtconfig.QT_INSTALL_LIBS,'QtCore.framework','Headers'),
-            os.path.join(qtconfig.QT_INSTALL_LIBS,'QtGui.framework','Headers'),
-            os.path.join(qtconfig.QT_INSTALL_LIBS,'QtWidgets.framework','Headers'),
+            os.path.abspath(inc_dir),
+            os.path.abspath(os.path.join(inc_dir, entry)),
+            qtconfig.QT_INSTALL_HEADERS
         ]
+        makefile.extra_lib_dirs+=[qtconfig.QT_INSTALL_LIBS, os.path.join('..','..','src',entry)]
+        makefile.extra_libs+=[entry]
 
-        makefile.extra_lflags+=[      
-            '-F'+qtconfig.QT_INSTALL_LIBS,
-            "-framework QtWidgets",
-            "-framework QtGui",
-            "-framework QtCore",
-            "-framework DiskArbitration",
-            "-framework IOKit",
-            "-framework OpenGL",
-            "-framework AGL",
-        ]
 
-    elif sys.platform=='win32':
-        makefile.extra_include_dirs+=[
-            os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtCore"),
-            os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtGui"),
-            os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtWidgets"),
-        ]
-        makefile.extra_lib_dirs+=[os.path.join('..','src','release')]
-        makefile.extra_libs+=['Qt5Core','Qt5Gui','Qt5Widgets']
-        makefile.extra_lflags+=['/IGNORE:4217,4049']
+        if sys.platform=='darwin':
+            makefile.extra_cxxflags+=['-F'+qtconfig.QT_INSTALL_LIBS]        
+            makefile.extra_include_dirs+=[
+                os.path.join(qtconfig.QT_INSTALL_LIBS,'QtCore.framework','Headers'),
+                os.path.join(qtconfig.QT_INSTALL_LIBS,'QtGui.framework','Headers'),
+                os.path.join(qtconfig.QT_INSTALL_LIBS,'QtWidgets.framework','Headers'),
+            ]
 
-    makefile.generate()
+            makefile.extra_lflags+=[      
+                '-F'+qtconfig.QT_INSTALL_LIBS,
+                "-framework QtWidgets",
+                "-framework QtGui",
+                "-framework QtCore",
+                "-framework DiskArbitration",
+                "-framework IOKit",
+                "-framework OpenGL",
+                "-framework AGL",
+            ]
 
+        elif sys.platform=='win32':
+            makefile.extra_include_dirs+=[
+                os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtCore"),
+                os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtGui"),
+                os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtWidgets"),
+            ]
+            makefile.extra_lib_dirs+=[os.path.join('..','src',entry,'release')]
+            makefile.extra_libs+=['Qt5Core','Qt5Gui','Qt5Widgets']
+            makefile.extra_lflags+=['/IGNORE:4217,4049']
+
+        makefile.generate()
+
+        output_dirs.append(output_dir)
+    
     sipconfig.ParentMakefile(
         configuration = config,
-        subdirs = ["src", output_dir],
+        subdirs=["src"]+output_dirs
     ).generate()
 
     os.chdir("src")    
     qmake_cmd=qmake_exe
     if sys.platform=="win32": qmake_cmd+=" -spec win32-msvc2010"
     print()
+    print ("####################")
+    print ("# Running qmake... #")
+    print ("####################")
+    print()
     print(qmake_cmd)
+    print()
     os.system(qmake_cmd)
     sys.exit()
