@@ -1,6 +1,3 @@
-%Import QtGui/QtGuimod.sip
-%Import QtWidgets/QtWidgetsmod.sip
-
 %Include ctkBasePopupWidget.sip
 
 class ctkPopupWidget : ctkBasePopupWidget {

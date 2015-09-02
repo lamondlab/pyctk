@@ -13,9 +13,17 @@ win32 {
 
 DEFINES += CTK_LIBRARY
 
-SOURCES += ctkUtils.cpp
+SOURCES += ctkUtils.cpp \
+	ctkBackTrace.cpp \
+	#ctkBinaryFileDescriptor.cpp \
+	ctkBooleanMapper.cpp \
+	ctkCallback.cpp \
 
-HEADERS += ctkUtils.h
+HEADERS += ctkUtils.h \
+	ctkBackTrace.h \
+	#ctkBinaryFileDescriptor.h \
+	ctkBooleanMapper.h \
+	ctkCallback.h \
 
 unix {
     target.path = /usr/lib
