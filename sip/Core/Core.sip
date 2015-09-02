@@ -10,5 +10,6 @@ typedef int size_t;
 //%Include ctkBinaryFileDescriptor.sip
 %Include ctkBooleanMapper.sip
 %Include ctkCallback.sip
+%Include ctkCommandLineParser.sip
 
 %Include ctkUtils.sip
