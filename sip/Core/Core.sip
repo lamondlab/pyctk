@@ -15,6 +15,9 @@ typedef int size_t;
 %Include ctkCommandLineParser.sip
 %Include ctkDependencyGraph.sip
 %Include ctkErrorLogLevel.sip
+%Include ctkErrorLogTerminalOutput.sip
+%Include ctkErrorLogContext.sip
+%Include ctkErrorLogAbstractMessageHandler.sip
 
 %Include ctkUtils.sip
 

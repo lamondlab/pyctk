@@ -15,6 +15,8 @@ SOURCES += ctkUtils.cpp \
     ctkCommandLineParser.cpp \
     ctkDependencyGraph.cpp \
     ctkErrorLogLevel.cpp \
+    ctkErrorLogTerminalOutput.cpp \
+    ctkErrorLogAbstractMessageHandler.cpp \
 
 HEADERS += ctkUtils.h \
     ctkBackTrace.h \
@@ -24,6 +26,9 @@ HEADERS += ctkUtils.h \
     ctkCommandLineParser.h \
     ctkDependencyGraph.h \
     ctkErrorLogLevel.h \
+    ctkErrorLogTerminalOutput.h \
+    ctkErrorLogAbstractMessageHandler.h \
+    ctkErrorLogContext.h \
 
 unix {
     target.path = /usr/lib

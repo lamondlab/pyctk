@@ -26,7 +26,7 @@
 #include <QDateTime>
 
 // CTK includes
-#include "ctkCoreExport.h"
+#include "ctkExport.h"
 #include "ctkErrorLogLevel.h"
 #include "ctkErrorLogTerminalOutput.h"
 
@@ -36,7 +36,7 @@ struct ctkErrorLogContext;
 
 //------------------------------------------------------------------------------
 /// \ingroup Core
-class CTK_CORE_EXPORT ctkErrorLogAbstractMessageHandler : public QObject
+class CTK_EXPORT ctkErrorLogAbstractMessageHandler : public QObject
 {
   Q_OBJECT
 public:

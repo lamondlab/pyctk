@@ -26,14 +26,14 @@
 #include <QObject>
 
 // CTK includes
-#include <ctkCoreExport.h>
+#include <ctkExport.h>
 
 //------------------------------------------------------------------------------
 class ctkErrorLogTerminalOutputPrivate;
 
 //------------------------------------------------------------------------------
 /// \ingroup Core
-class CTK_CORE_EXPORT ctkErrorLogTerminalOutput : public QObject
+class CTK_EXPORT ctkErrorLogTerminalOutput : public QObject
 {
   Q_OBJECT
   Q_FLAGS(TerminalOutputs)
