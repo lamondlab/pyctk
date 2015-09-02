@@ -1,9 +1,3 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2015-08-20T11:33:53
-#
-#-------------------------------------------------
-
 TARGET = Core
 TEMPLATE = lib
 
@@ -18,12 +12,14 @@ SOURCES += ctkUtils.cpp \
 	#ctkBinaryFileDescriptor.cpp \
 	ctkBooleanMapper.cpp \
 	ctkCallback.cpp \
+	ctkCommandLineParser.cpp \
 
 HEADERS += ctkUtils.h \
 	ctkBackTrace.h \
 	#ctkBinaryFileDescriptor.h \
 	ctkBooleanMapper.h \
 	ctkCallback.h \
+	ctkCommandLineParser.h \
 
 unix {
     target.path = /usr/lib

@@ -1,23 +1,17 @@
-#-------------------------------------------------
-#
-# Project created by QtCreator 2015-08-20T11:33:53
-#
-#-------------------------------------------------
-
 QT       += widgets
 
 TARGET = Widgets
 TEMPLATE = lib
 
 win32 {
-	CONFIG += staticlib	
+    CONFIG += staticlib 
 }
 
 DEFINES += CTK_LIBRARY
 
 SOURCES += ctkPopupWidget.cpp \
     ctkBasePopupWidget.cpp \
-	ctkActionsWidget.cpp
+    ctkActionsWidget.cpp
 
 HEADERS += ctkPopupWidget.h\
     ctkBasePopupWidget_p.h \
