@@ -8,7 +8,7 @@ win32 {
 DEFINES += CTK_LIBRARY
 
 SOURCES += ctkBackTrace.cpp \
-    #ctkBinaryFileDescriptor.cpp \
+    # ctkBinaryFileDescriptor.cpp \
     ctkBooleanMapper.cpp \
     ctkCallback.cpp \
     ctkCommandLineParser.cpp \
@@ -30,9 +30,16 @@ SOURCES += ctkBackTrace.cpp \
     ctkValueProxy.cpp \
     ctkWorkflow.cpp \
     ctkWorkflowStep.cpp \
+    ctkAbstractFactory.h \
+    ctkAbstractFileBasedFactory.h \
+    ctkAbstractLibraryFactory.h \
+    ctkAbstractObjectFactory.h \
+    ctkAbstractPluginFactory.h \
+    # ctkAbstractQObjectFactory.h \
+
 
 HEADERS += ctkBackTrace.h \
-    #ctkBinaryFileDescriptor.h \
+    # ctkBinaryFileDescriptor.h \
     ctkBooleanMapper.h \
     ctkCallback.h \
     ctkCommandLineParser.h \
@@ -61,6 +68,12 @@ HEADERS += ctkBackTrace.h \
     ctkWorkflowStep.h \
     ctkWorkflowStep_p.h \
     ctkWorkflowTransitions.h \
+    ctkAbstractFactory.tpp \
+    ctkAbstractFileBasedFactory.tpp \
+    ctkAbstractLibraryFactory.tpp \
+    ctkAbstractObjectFactory.tpp \
+    ctkAbstractPluginFactory.tpp \
+    # ctkAbstractQObjectFactory.tpp \    
 
 unix {
     target.path = /usr/lib

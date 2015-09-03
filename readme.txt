@@ -10,4 +10,5 @@ Known Issues
 7. ctkHighPrecisionTimer: not wrapped as not exported.
 8. ctkLogger: wrapped but deprecated.
 9. ctkSingleton: not wrapped as not exported.
-10. ctkAbstract*.tpp: not dealt with these templates.
+10. ctkAbstract*.tpp: not wrapped as not exported.
+11. ctkAbstractQObjectFactory: not included due to missing namespace error 'QAlgorithmsPrivate'
