@@ -20,6 +20,8 @@ typedef int size_t;
 %Include ctkErrorLogAbstractMessageHandler.sip
 %Include ctkErrorLogFDMessageHandler.sip
 %Include ctkErrorLogQtMessageHandler.sip
+%Include ctkErrorLogStreamMessageHandler.sip
+//%Include ctkException.sip
 
 %Include ctkUtils.sip
 
