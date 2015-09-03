@@ -9,5 +9,7 @@
 
 %Include ctkActionsWidget.sip
 %Include ctkAddRemoveComboBox.sip
+%Include ctkAxesWidget.sip
+%Include ctkButtonGroup.sip
 
 %Include ctkPopupWidget.sip

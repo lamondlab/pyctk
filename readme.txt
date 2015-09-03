@@ -12,3 +12,4 @@ Known Issues
 9. ctkSingleton: not wrapped as not exported.
 10. ctkAbstract*.tpp: not wrapped as not exported.
 11. ctkAbstractQObjectFactory: not included due to missing namespace error 'QAlgorithmsPrivate'
+12. ctk*EventPlayer & ctk*EventTranslator: not included due to dependency on QtTesting (currently out of scope).

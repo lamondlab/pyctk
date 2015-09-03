@@ -10,17 +10,21 @@ win32 {
 DEFINES += CTK_LIBRARY
 
 SOURCES += ctkPopupWidget.cpp \
-    ctkBasePopupWidget.cpp \
     ctkActionsWidget.cpp \
     ctkAddRemoveComboBox.cpp \
+    ctkAxesWidget.cpp \
+    ctkBasePopupWidget.cpp \
+    ctkButtonGroup.cpp \
 
-HEADERS += ctkPopupWidget.h\
-    ctkBasePopupWidget_p.h \
-    ctkBasePopupWidget.h \
+HEADERS += ctkPopupWidget.h\    
     ctkPopupWidget_p.h \
     ctkExport.h \
     ctkActionsWidget.h \
     ctkAddRemoveComboBox.h \
+    ctkAxesWidget.h \
+    ctkBasePopupWidget_p.h \
+    ctkBasePopupWidget.h \
+    ctkButtonGroup.h \
 
 unix {
     target.path = /usr/lib
