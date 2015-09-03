@@ -27,7 +27,12 @@ typedef int size_t;
 %Include ctkLogger.sip
 %Include ctkModelTester.sip
 %Include ctkScopedCurrentDir.sip
+%Include ctkSetName.sip
 %Include ctkUtils.sip
 %Include ctkValueProxy.sip
+%Include ctkWorkflow.sip
+%Include ctkWorkflowStep.sip
+%Include ctkWorkflowStepPrivate.sip
+%Include ctkWorkflowTransitions.sip
 
 typedef std::list<int> intListType;
