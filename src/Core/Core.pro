@@ -17,6 +17,8 @@ SOURCES += ctkUtils.cpp \
     ctkErrorLogLevel.cpp \
     ctkErrorLogTerminalOutput.cpp \
     ctkErrorLogAbstractMessageHandler.cpp \
+    ctkErrorLogFDMessageHandler.cpp \
+    ctkErrorLogQtMessageHandler.cpp \
 
 HEADERS += ctkUtils.h \
     ctkBackTrace.h \
@@ -29,7 +31,10 @@ HEADERS += ctkUtils.h \
     ctkErrorLogTerminalOutput.h \
     ctkErrorLogAbstractMessageHandler.h \
     ctkErrorLogContext.h \
-
+    ctkErrorLogFDMessageHandler.h \
+    ctkErrorLogFDMessageHandler_p.h \
+    ctkErrorLogQtMessageHandler.h \
+    
 unix {
     target.path = /usr/lib
     INSTALLS += target
