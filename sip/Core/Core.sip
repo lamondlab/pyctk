@@ -22,7 +22,10 @@ typedef int size_t;
 %Include ctkErrorLogQtMessageHandler.sip
 %Include ctkErrorLogStreamMessageHandler.sip
 //%Include ctkException.sip
+%Include ctkFileLogger.sip
+%Include ctkLinearValueProxy.sip
 
 %Include ctkUtils.sip
+%Include ctkValueProxy.sip
 
 typedef std::list<int> intListType;
