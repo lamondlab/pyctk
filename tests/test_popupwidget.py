@@ -2,7 +2,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
-from PyCTK import ctkPopupWidget as PopupWidget
+from PyCTK.Widgets import ctkPopupWidget as PopupWidget
 
 class Widget(QWidget):
     def __init__(self, parent=None, **kwargs):
