@@ -25,7 +25,7 @@ typedef int size_t;
 %Include ctkFileLogger.sip
 %Include ctkLinearValueProxy.sip
 %Include ctkLogger.sip
-
+%Include ctkModelTester.sip
 %Include ctkUtils.sip
 %Include ctkValueProxy.sip
 
