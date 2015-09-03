@@ -25,8 +25,11 @@ SOURCES += ctkBackTrace.cpp \
     ctkLogger.cpp \
     ctkModelTester.cpp \
     ctkScopedCurrentDir.cpp \
+    ctkSetName.cpp \
     ctkUtils.cpp \
     ctkValueProxy.cpp \
+    ctkWorkflow.cpp \
+    ctkWorkflowStep.cpp \
 
 HEADERS += ctkBackTrace.h \
     #ctkBinaryFileDescriptor.h \
@@ -49,8 +52,15 @@ HEADERS += ctkBackTrace.h \
     ctkModelTester.h \
     ctkPimpl.h \
     ctkScopedCurrentDir.h \
+    ctkSetName.h \
+    ctkSingleton.h \
     ctkUtils.h \
     ctkValueProxy.h \
+    ctkWorkflow.h \
+    ctkWorkflow_p.h \
+    ctkWorkflowStep.h \
+    ctkWorkflowStep_p.h \
+    ctkWorkflowTransitions.h \
 
 unix {
     target.path = /usr/lib

@@ -9,3 +9,4 @@ Known Issues
 6. ctkException: is there any point in exposing this to Python?
 7. ctkHighPrecisionTimer: not wrapped as not exported.
 8. ctkLogger: wrapped but deprecated.
+9. ctkSingleton: not wrapped as not exported.
