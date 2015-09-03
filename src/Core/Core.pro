@@ -24,6 +24,7 @@ SOURCES += ctkUtils.cpp \
     ctkFileLogger.cpp \
     ctkLinearValueProxy.cpp \
     ctkLogger.cpp \
+    ctkModelTester.cpp \
     ctkValueProxy.cpp \
 
 HEADERS += ctkUtils.h \
@@ -45,6 +46,8 @@ HEADERS += ctkUtils.h \
     ctkFileLogger.h \
     ctkLinearValueProxy.h \
     ctkLogger.h \
+    ctkModelTester.h \
+    ctkPimpl.h \
     ctkValueProxy.h \
 
 unix {
