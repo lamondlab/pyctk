@@ -24,6 +24,7 @@ typedef int size_t;
 //%Include ctkException.sip
 %Include ctkFileLogger.sip
 %Include ctkLinearValueProxy.sip
+%Include ctkLogger.sip
 
 %Include ctkUtils.sip
 %Include ctkValueProxy.sip
