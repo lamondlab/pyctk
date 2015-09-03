@@ -21,6 +21,9 @@ SOURCES += ctkUtils.cpp \
     ctkErrorLogQtMessageHandler.cpp \
     ctkErrorLogStreamMessageHandler.cpp \
     ctkException.cpp \
+    ctkFileLogger.cpp \
+    ctkLinearValueProxy.cpp \
+    ctkValueProxy.cpp \
 
 HEADERS += ctkUtils.h \
     ctkBackTrace.h \
@@ -38,6 +41,9 @@ HEADERS += ctkUtils.h \
     ctkErrorLogQtMessageHandler.h \
     ctkErrorLogStreamMessageHandler.h \
     ctkException.h \
+    ctkFileLogger.h \
+    ctkLinearValueProxy.h \
+    ctkValueProxy.h \
 
 unix {
     target.path = /usr/lib
