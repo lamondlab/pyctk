@@ -23,6 +23,7 @@ SOURCES += ctkUtils.cpp \
     ctkException.cpp \
     ctkFileLogger.cpp \
     ctkLinearValueProxy.cpp \
+    ctkLogger.cpp \
     ctkValueProxy.cpp \
 
 HEADERS += ctkUtils.h \
@@ -43,6 +44,7 @@ HEADERS += ctkUtils.h \
     ctkException.h \
     ctkFileLogger.h \
     ctkLinearValueProxy.h \
+    ctkLogger.h \
     ctkValueProxy.h \
 
 unix {
