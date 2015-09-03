@@ -28,4 +28,8 @@ public:
   virtual void processEdge(int /*from*/, int /*to*/);//{}
   //bool topologicalSort(std::list<int>& sorted, int rootId = -1);
   //void sourceVertices(std::list<int>& sources);
+
+private:
+  ctkDependencyGraph(const ctkDependencyGraph &);
+  ctkDependencyGraph &operator=(const ctkDependencyGraph &);  
 };
