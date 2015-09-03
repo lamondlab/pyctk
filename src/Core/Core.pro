@@ -7,8 +7,7 @@ win32 {
 
 DEFINES += CTK_LIBRARY
 
-SOURCES += ctkUtils.cpp \
-    ctkBackTrace.cpp \
+SOURCES += ctkBackTrace.cpp \
     #ctkBinaryFileDescriptor.cpp \
     ctkBooleanMapper.cpp \
     ctkCallback.cpp \
@@ -25,10 +24,11 @@ SOURCES += ctkUtils.cpp \
     ctkLinearValueProxy.cpp \
     ctkLogger.cpp \
     ctkModelTester.cpp \
+    ctkScopedCurrentDir.cpp \
+    ctkUtils.cpp \
     ctkValueProxy.cpp \
 
-HEADERS += ctkUtils.h \
-    ctkBackTrace.h \
+HEADERS += ctkBackTrace.h \
     #ctkBinaryFileDescriptor.h \
     ctkBooleanMapper.h \
     ctkCallback.h \
@@ -48,6 +48,8 @@ HEADERS += ctkUtils.h \
     ctkLogger.h \
     ctkModelTester.h \
     ctkPimpl.h \
+    ctkScopedCurrentDir.h \
+    ctkUtils.h \
     ctkValueProxy.h \
 
 unix {

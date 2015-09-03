@@ -101,10 +101,9 @@ protected:
   ctkDependencyGraphPrivate* d_ptr;
 
 private:
-
   // Intentionally disable copy semantics
-  //ctkDependencyGraph(const ctkDependencyGraph &);
-  //ctkDependencyGraph &operator=(const ctkDependencyGraph &);
+  ctkDependencyGraph(const ctkDependencyGraph &);
+  ctkDependencyGraph &operator=(const ctkDependencyGraph &);
 };
 
 #endif
