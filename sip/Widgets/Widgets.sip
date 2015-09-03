@@ -8,5 +8,6 @@
 %Import Core/Core.sip
 
 %Include ctkActionsWidget.sip
+%Include ctkAddRemoveComboBox.sip
 
 %Include ctkPopupWidget.sip
