@@ -24,6 +24,9 @@
 %Include ctkComboBox.sip
 %Include ctkCompleter.sip
 %Include ctkConsole.sip
+%Include ctkCoordinatesWidget.sip
+
+%Include ctkDoubleSpinBox.sip
 
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip

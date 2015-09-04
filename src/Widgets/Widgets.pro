@@ -30,6 +30,8 @@ SOURCES += ctkPopupWidget.cpp \
     ctkComboBox.cpp \
     ctkCompleter.cpp \
     ctkConsole.cpp \
+    ctkCoordinatesWidget.cpp \
+    ctkDoubleSpinBox.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -58,11 +60,19 @@ HEADERS += ../ctkExport.h \
     ctkCompleter.h \
     ctkConsole_p.h \
     ctkConsole.h \
+    ctkCoordinatesWidget.h \
+    ctkCoordinatesWidget_p.h \
+    ctkDoubleSpinBox.h \
+    ctkDoubleSpinBox_p.h \
 
 unix {
     target.path = /usr/lib
     INSTALLS += target
 }
+
+INCLUDEPATH += ../Core
+
+LIBS += -L../Core -lCore
 
 RESOURCES += \
     Resources/ctkWidgets.qrc
