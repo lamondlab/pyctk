@@ -12,6 +12,11 @@
 %Include ctkAxesWidget.sip
 %Include ctkButtonGroup.sip
 %Include ctkCheckableComboBox.sip
+%Include ctkCheckableHeaderView.sip
 %Include ctkCheckableModelHelper.sip
+%Include ctkCheckablePushButton.sip
+%Include ctkCheckBoxPixmaps.sip
+%Include ctkPushButton.sip
+
 
 %Include ctkPopupWidget.sip

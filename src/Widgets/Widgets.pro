@@ -17,11 +17,13 @@ SOURCES += ctkPopupWidget.cpp \
     ctkButtonGroup.cpp \
     ctkCheckableComboBox.cpp \
     ctkCheckableModelHelper.cpp \    
+    ctkCheckablePushButton.cpp \
+    ctkPushButton.cpp \
+    ctkCheckableHeaderView.cpp \
+    ctkCheckBoxPixmaps.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
-    ctkPopupWidget.h\
-    ctkPopupWidget_p.h \
     ctkActionsWidget.h \
     ctkAddRemoveComboBox.h \
     ctkAxesWidget.h \
@@ -30,6 +32,13 @@ HEADERS += ../ctkExport.h \
     ctkButtonGroup.h \
     ctkCheckableComboBox.h \
     ctkCheckableModelHelper.h \
+    ctkCheckablePushButton.h \
+    ctkPopupWidget.h\
+    ctkPopupWidget_p.h \
+    ctkPushButton_p.h \
+    ctkPushButton.h \
+    ctkCheckableHeaderView.h \
+    ctkCheckBoxPixmaps.h \
 
 unix {
     target.path = /usr/lib
