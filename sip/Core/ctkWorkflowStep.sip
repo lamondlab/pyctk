@@ -49,11 +49,6 @@ protected:
   void onExitComplete() const;
 
 private:
-  //Q_DECLARE_PRIVATE(ctkWorkflowStep);
-  //Q_DISABLE_COPY(ctkWorkflowStep);
   ctkWorkflowStep(const ctkWorkflowStep &);
   ctkWorkflowStep &operator=(const ctkWorkflowStep &);  
-
-  //friend class ctkWorkflow;        // For access to processingState, validationState, setWorkflow, validate
-  //friend class ctkWorkflowPrivate; // For access to invokeOn{Entry,Exit}Command, on{Entry,Exit}
 };

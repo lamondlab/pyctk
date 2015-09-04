@@ -17,8 +17,9 @@
 %Include ctkCheckablePushButton.sip
 %Include ctkCheckBox.sip
 %Include ctkCheckBoxPixmaps.sip
-%Include ctkPushButton.sip
-//%Include ctkProxyStyle.sip
 %Include ctkCollapsibleButton.sip
+%Include ctkCollapsibleGroupBox.sip
 
 %Include ctkPopupWidget.sip
+//%Include ctkProxyStyle.sip
+%Include ctkPushButton.sip
