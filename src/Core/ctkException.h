@@ -28,7 +28,7 @@
 #include <QSet>
 
 // CTK includes
-#include <ctkExport.h>
+#include "../ctkExport.h"
 #include <ctkBackTrace.h>
 
 //---------------------------------------------------------------------------

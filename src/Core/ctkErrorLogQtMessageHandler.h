@@ -23,7 +23,7 @@
 
 // CTK includes
 #include "ctkErrorLogAbstractMessageHandler.h"
-#include "ctkExport.h"
+#include "../ctkExport.h"
 
 // Qt includes
 #if QT_VERSION >= 0x50000

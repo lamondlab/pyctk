@@ -35,7 +35,7 @@
 #include <QString>
 #include <QScopedPointer>
 
-#include "ctkExport.h"
+#include "../ctkExport.h"
 
 
 class ctkBinaryFileDescriptorPrivate;

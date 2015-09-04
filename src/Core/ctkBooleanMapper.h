@@ -26,7 +26,7 @@
 #include <QVariant>
 
 // CTK includes
-#include "ctkExport.h"
+#include "../ctkExport.h"
 class ctkBooleanMapperPrivate;
 
 //---------------------------------------------------------------------------

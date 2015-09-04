@@ -22,7 +22,7 @@
 #include <QDebug>
 
 // CTK includes
-#include <ctkPimpl.h>
+#include "../ctkPimpl.h"
 #include "ctkAddRemoveComboBox.h"
 #include "ui_ctkAddRemoveComboBox.h"
 

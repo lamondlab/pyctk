@@ -7,7 +7,7 @@
 #include <QMetaType>
 
 // CTK includes
-#include "ctkExport.h"
+#include "../ctkExport.h"
 
 class ctkBasePopupWidgetPrivate;
 

@@ -25,7 +25,7 @@
 #include <QString>
 
 // CTK includes
-#include "ctkExport.h"
+#include "../ctkExport.h"
 
 //------------------------------------------------------------------------------
 /// \ingroup Core

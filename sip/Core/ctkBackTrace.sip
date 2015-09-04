@@ -1,3 +1,9 @@
+%If (WS_WIN)
+%ModuleCode
+#include "ctkUtils.h"
+%End
+%End
+
 class ctkBackTrace
 {
 
@@ -17,3 +23,21 @@ public:
   QString stackFrame(unsigned frameNumber) const;
   QList<QString> stackTrace() const;
 };
+
+%If (WS_WIN)
+namespace ctk
+{
+
+%TypeHeaderCode
+#include "ctkBackTrace.h"
+#include "ctkUtils.h"
+
+#include <windows.h>
+#include <stdlib.h>
+#include <dbghelp.h>
+%End
+
+  bool DebugSymInitialize();
+
+};
+%End

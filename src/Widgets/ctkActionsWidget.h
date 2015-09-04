@@ -27,8 +27,8 @@
 #include <QWidget>
 
 // CTK includes
-#include "ctkPimpl.h"
-#include "ctkExport.h"
+#include "../ctkPimpl.h"
+#include "../ctkExport.h"
 class ctkActionsWidgetPrivate;
 class ctkSortFilterActionsProxyModelPrivate;
 

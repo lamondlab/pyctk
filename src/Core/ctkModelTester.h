@@ -28,8 +28,8 @@
 #include <QList>
 
 /// CTK includes
-#include "ctkPimpl.h"
-#include "ctkExport.h"
+#include "../ctkPimpl.h"
+#include "../ctkExport.h"
 
 class QAbstractItemModel;
 class ctkModelTesterPrivate;

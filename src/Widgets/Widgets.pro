@@ -16,9 +16,10 @@ SOURCES += ctkPopupWidget.cpp \
     ctkBasePopupWidget.cpp \
     ctkButtonGroup.cpp \
 
-HEADERS += ctkPopupWidget.h\    
+HEADERS += ../ctkExport.h \
+    ../ctkPimpl.h \
+    ctkPopupWidget.h\
     ctkPopupWidget_p.h \
-    ctkExport.h \
     ctkActionsWidget.h \
     ctkAddRemoveComboBox.h \
     ctkAxesWidget.h \
