@@ -15,8 +15,9 @@
 %Include ctkCheckableHeaderView.sip
 %Include ctkCheckableModelHelper.sip
 %Include ctkCheckablePushButton.sip
+%Include ctkCheckBox.sip
 %Include ctkCheckBoxPixmaps.sip
 %Include ctkPushButton.sip
-
+//%Include ctkProxyStyle.sip
 
 %Include ctkPopupWidget.sip
