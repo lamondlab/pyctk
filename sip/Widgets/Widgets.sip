@@ -19,6 +19,7 @@
 %Include ctkCheckBoxPixmaps.sip
 %Include ctkCollapsibleButton.sip
 %Include ctkCollapsibleGroupBox.sip
+%Include ctkColorDialog.sip
 
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip
