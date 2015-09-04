@@ -140,7 +140,7 @@ if __name__=="__main__":
             install_dir=dest_pkg_dir
         )
 
-        makefile.extra_defines+=['MYLABEL_LIBRARY','QT_CORE_LIB', 'QT_GUI_LIB', 'QT_WIDGETS_LIB']
+        makefile.extra_defines+=['CTK_LIBRARY','QT_CORE_LIB', 'QT_GUI_LIB', 'QT_WIDGETS_LIB']
         makefile.extra_include_dirs+=[
             os.path.abspath(inc_dir),
             os.path.abspath(os.path.join(inc_dir, entry)),
@@ -149,10 +149,15 @@ if __name__=="__main__":
         makefile.extra_lib_dirs+=[
             qtconfig.QT_INSTALL_LIBS,
             os.path.abspath(inc_dir),
-            os.path.join(os.path.abspath(inc_dir),entry)
+            os.path.join(os.path.abspath(inc_dir),entry),
         ]
+
         makefile.extra_libs+=[entry]
 
+        if entry!="Core":
+            makefile.extra_include_dirs+=[os.path.join(os.path.abspath(inc_dir),"Core")]
+            makefile.extra_lib_dirs+=[os.path.join(os.path.abspath(inc_dir),"Core")]
+            makefile.extra_libs+=["Core"]
 
         if sys.platform=='darwin':
             makefile.extra_cxxflags+=['-F'+qtconfig.QT_INSTALL_LIBS]        
