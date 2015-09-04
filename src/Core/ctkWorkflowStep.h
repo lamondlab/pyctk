@@ -26,11 +26,11 @@ class QObject;
 class QState;
 
 // CTK includes
-#include "ctkPimpl.h"
+#include "../ctkPimpl.h"
 #include "ctkWorkflow_p.h"
 #include "ctkWorkflowTransitions.h"
 
-#include "ctkExport.h"
+#include "../ctkExport.h"
 
 class ctkWorkflow;
 

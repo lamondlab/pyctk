@@ -26,7 +26,7 @@
 #include <QDateTime>
 
 // CTK includes
-#include "ctkExport.h"
+#include "../ctkExport.h"
 #include "ctkErrorLogLevel.h"
 #include "ctkErrorLogTerminalOutput.h"
 

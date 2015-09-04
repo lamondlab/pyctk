@@ -23,7 +23,7 @@
 
 // CTK includes
 #include <ctkErrorLogAbstractMessageHandler.h>
-#include "ctkExport.h"
+#include "../ctkExport.h"
 
 class ctkErrorLogFDMessageHandlerPrivate;
 

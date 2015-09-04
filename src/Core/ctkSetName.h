@@ -56,7 +56,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <QString>
 
 // CTK includes
-#include "ctkExport.h"
+#include "../ctkExport.h"
 
 /**
   Using ctkSetName, you can create and initialize Qt objects without having to create a bunch of temporaries:

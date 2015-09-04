@@ -25,9 +25,9 @@
 #include <QButtonGroup>
 
 // CTK includes
-#include <ctkPimpl.h>
+#include "../ctkPimpl.h"
 
-#include "ctkExport.h"
+#include "../ctkExport.h"
 
 class ctkButtonGroupPrivate;
 

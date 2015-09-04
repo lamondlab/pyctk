@@ -30,15 +30,16 @@ SOURCES += ctkBackTrace.cpp \
     ctkValueProxy.cpp \
     ctkWorkflow.cpp \
     ctkWorkflowStep.cpp \
-    ctkAbstractFactory.h \
-    ctkAbstractFileBasedFactory.h \
-    ctkAbstractLibraryFactory.h \
-    ctkAbstractObjectFactory.h \
-    ctkAbstractPluginFactory.h \
-    # ctkAbstractQObjectFactory.h \
+    ctkAbstractFactory.tpp \
+    ctkAbstractFileBasedFactory.tpp \
+    ctkAbstractLibraryFactory.tpp \
+    ctkAbstractObjectFactory.tpp \
+    ctkAbstractPluginFactory.tpp \
+    # ctkAbstractQObjectFactory.tpp \
 
-
-HEADERS += ctkBackTrace.h \
+HEADERS += ../ctkExport.h \
+    ../ctkPimpl.h \
+    ctkBackTrace.h \
     # ctkBinaryFileDescriptor.h \
     ctkBooleanMapper.h \
     ctkCallback.h \
@@ -57,7 +58,6 @@ HEADERS += ctkBackTrace.h \
     ctkLinearValueProxy.h \
     ctkLogger.h \
     ctkModelTester.h \
-    ctkPimpl.h \
     ctkScopedCurrentDir.h \
     ctkSetName.h \
     ctkSingleton.h \
@@ -68,12 +68,12 @@ HEADERS += ctkBackTrace.h \
     ctkWorkflowStep.h \
     ctkWorkflowStep_p.h \
     ctkWorkflowTransitions.h \
-    ctkAbstractFactory.tpp \
-    ctkAbstractFileBasedFactory.tpp \
-    ctkAbstractLibraryFactory.tpp \
-    ctkAbstractObjectFactory.tpp \
-    ctkAbstractPluginFactory.tpp \
-    # ctkAbstractQObjectFactory.tpp \    
+    ctkAbstractFactory.h \
+    ctkAbstractFileBasedFactory.h \
+    ctkAbstractLibraryFactory.h \
+    ctkAbstractObjectFactory.h \
+    ctkAbstractPluginFactory.h \
+    # ctkAbstractQObjectFactory.h \
 
 unix {
     target.path = /usr/lib

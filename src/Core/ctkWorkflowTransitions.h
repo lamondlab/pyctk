@@ -27,7 +27,7 @@
 #include <QString>
 
 // CTK includes
-#include "ctkExport.h"
+#include "../ctkExport.h"
 
 /// \ingroup Core
 /// \brief Custom transitions for use with ctkWorkflow.

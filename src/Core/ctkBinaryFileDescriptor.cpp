@@ -30,7 +30,7 @@
 
 // CTK includes
 #include "ctkBinaryFileDescriptor.h"
-#include "ctkPimpl.h"
+#include "../ctkPimpl.h"
 
 // BinUtils includes
 #include <bfd.h>

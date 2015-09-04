@@ -23,7 +23,7 @@
 #define __ctkBackTrace_h
 
 // CTK includes
-#include "ctkExport.h"
+#include "../ctkExport.h"
 
 // Qt includes
 #include <QScopedPointer>

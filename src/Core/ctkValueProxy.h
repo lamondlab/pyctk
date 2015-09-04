@@ -26,7 +26,7 @@
 #include <QScopedPointer>
 
 // CTK includes
-#include "ctkExport.h"
+#include "../ctkExport.h"
 
 class ctkValueProxyPrivate;
 

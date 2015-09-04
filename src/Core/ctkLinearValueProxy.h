@@ -22,9 +22,9 @@
 #define __ctkLinearValueProxy_h
 
 // CTK includes
-#include "ctkExport.h"
+#include "../ctkExport.h"
 #include "ctkValueProxy.h"
-#include "ctkPimpl.h"
+#include "../ctkPimpl.h"
 
 class ctkLinearValueProxyPrivate;
 

@@ -29,11 +29,11 @@ class QString;
 class QState;
 
 // CTK includes
-#include <ctkPimpl.h>
+#include "../ctkPimpl.h"
 #include "ctkWorkflow.h"
 #include "ctkWorkflowStep.h"
 #include "ctkWorkflowTransitions.h"
-#include "ctkExport.h"
+#include "../ctkExport.h"
 
 class ctkWorkflow;
 
