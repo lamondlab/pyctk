@@ -1,6 +1,7 @@
 @echo off
 nmake clean
 rd modules /S /Q
+rd PyCTK /S /Q
 
 rd src\Core\debug /S /Q
 rd src\Core\release /S /Q
