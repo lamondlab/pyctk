@@ -180,9 +180,7 @@ if __name__=="__main__":
                 os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtWidgets"),
             ]
             makefile.extra_lib_dirs+=[os.path.join('..','..','src',entry,'release')]
-            makefile.extra_libs+=['Qt5Core','Qt5Gui','Qt5Widgets',
-                'dbghelp'
-            ]
+            makefile.extra_libs+=['Qt5Core','Qt5Gui','Qt5Widgets','dbghelp']
             makefile.extra_lflags+=['/IGNORE:4217,4049']
             makefile.extra_lflags+=['/LIBPATH:{}'.format(os.path.join('..','..','src',entry,'release'))]
 

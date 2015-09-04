@@ -15,6 +15,8 @@ SOURCES += ctkPopupWidget.cpp \
     ctkAxesWidget.cpp \
     ctkBasePopupWidget.cpp \
     ctkButtonGroup.cpp \
+    ctkCheckableComboBox.cpp \
+    ctkCheckableModelHelper.cpp \    
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -26,6 +28,8 @@ HEADERS += ../ctkExport.h \
     ctkBasePopupWidget_p.h \
     ctkBasePopupWidget.h \
     ctkButtonGroup.h \
+    ctkCheckableComboBox.h \
+    ctkCheckableModelHelper.h \
 
 unix {
     target.path = /usr/lib

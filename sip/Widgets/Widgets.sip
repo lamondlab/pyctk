@@ -11,5 +11,7 @@
 %Include ctkAddRemoveComboBox.sip
 %Include ctkAxesWidget.sip
 %Include ctkButtonGroup.sip
+%Include ctkCheckableComboBox.sip
+%Include ctkCheckableModelHelper.sip
 
 %Include ctkPopupWidget.sip
