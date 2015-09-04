@@ -20,6 +20,7 @@
 %Include ctkCollapsibleButton.sip
 %Include ctkCollapsibleGroupBox.sip
 %Include ctkColorDialog.sip
+%Include ctkColorPickerButton.sip
 
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip

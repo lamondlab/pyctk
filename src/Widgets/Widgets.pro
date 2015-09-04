@@ -26,6 +26,7 @@ SOURCES += ctkPopupWidget.cpp \
     ctkCollapsibleButton.cpp \
     ctkCollapsibleGroupBox.cpp \
     ctkColorDialog.cpp \
+    ctkColorPickerButton.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -49,6 +50,7 @@ HEADERS += ../ctkExport.h \
     ctkCollapsibleButton.h \
     ctkCollapsibleGroupBox.h \
     ctkColorDialog.h \
+    ctkColorPickerButton.h \
 
 unix {
     target.path = /usr/lib
