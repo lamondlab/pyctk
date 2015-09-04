@@ -21,6 +21,8 @@ SOURCES += ctkPopupWidget.cpp \
     ctkPushButton.cpp \
     ctkCheckableHeaderView.cpp \
     ctkCheckBoxPixmaps.cpp \
+    ctkCheckBox.cpp \
+    ctkProxyStyle.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -39,6 +41,8 @@ HEADERS += ../ctkExport.h \
     ctkPushButton.h \
     ctkCheckableHeaderView.h \
     ctkCheckBoxPixmaps.h \
+    ctkCheckBox.h \
+    ctkProxyStyle.h \
 
 unix {
     target.path = /usr/lib

@@ -15,3 +15,4 @@ Known Issues
 12. ctk*EventPlayer & ctk*EventTranslator: not included due to dependency on QtTesting (currently out of scope).
 13. ctkCheckableComboBox: checkableModelHelper() seems to have no implementation, thus is not wrapped.
 14. ctkCheckableModelHelper: headerCheckState() and checkState() overloads can't be resolved.
+15. ctkProxyStyle: not wrapped as QProxyStyle (on which depends) is not wrapped by PyQt5(?).
