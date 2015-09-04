@@ -23,6 +23,7 @@
 %Include ctkColorPickerButton.sip
 %Include ctkComboBox.sip
 %Include ctkCompleter.sip
+%Include ctkConsole.sip
 
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip

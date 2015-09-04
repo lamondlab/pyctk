@@ -29,6 +29,7 @@ SOURCES += ctkPopupWidget.cpp \
     ctkColorPickerButton.cpp \
     ctkComboBox.cpp \
     ctkCompleter.cpp \
+    ctkConsole.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -55,6 +56,8 @@ HEADERS += ../ctkExport.h \
     ctkColorPickerButton.h \
     ctkComboBox.h \
     ctkCompleter.h \
+    ctkConsole_p.h \
+    ctkConsole.h \
 
 unix {
     target.path = /usr/lib
