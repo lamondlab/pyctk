@@ -65,6 +65,9 @@ SOURCES += ctkPopupWidget.cpp \
     ctkMenuButton.cpp \
     ctkMenuComboBox.cpp \
     ctkSearchBox.cpp \
+    ctkMessageBox.cpp \
+    ctkModalityWidget.cpp \
+    ctkPathLineEdit.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -133,6 +136,9 @@ HEADERS += ../ctkExport.h \
     ctkMenuComboBox.h \
     ctkMenuComboBox_p.h \
     ctkSearchBox.h \
+    ctkMessageBox.h \
+    ctkModalityWidget.h \
+    ctkPathLineEdit.h \
 
 unix {
     target.path = /usr/lib
