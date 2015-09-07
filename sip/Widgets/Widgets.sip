@@ -29,6 +29,7 @@
 %Include ctkDateRangeWidget.sip
 %Include ctkDirectoryButton.sip
 %Include ctkDoubleRangeSlider.sip
+%Include ctkDoubleSlider.sip
 %Include ctkDoubleSpinBox.sip
 
 %Include ctkFileDialog.sip

@@ -38,6 +38,7 @@ SOURCES += ctkPopupWidget.cpp \
     ctkFileDialog.cpp \
     ctkRangeSlider.cpp \
     ctkDoubleRangeSlider.cpp \
+    ctkDoubleSlider.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -76,6 +77,7 @@ HEADERS += ../ctkExport.h \
     ctkFileDialog.h \
     ctkRangeSlider.h \
     ctkDoubleRangeSlider.h \
+    ctkDoubleSlider.h \
 
 unix {
     target.path = /usr/lib
