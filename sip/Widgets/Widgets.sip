@@ -51,6 +51,9 @@
 %Include ctkLayoutViewFactory.sip
 %Include ctkMaterialPropertyPreviewLabel.sip
 %Include ctkMaterialPropertyWidget.sip
+%Include ctkMatrixWidget.sip
+%Include ctkMenuButton.sip
+%Include ctkMenuComboBox.sip
 
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip
@@ -59,6 +62,8 @@
 %Include ctkPixmapIconEngine.sip
 
 %Include ctkRangeSlider.sip
+
+%Include ctkSearchBox.sip
 
 %Include ctkSizeGrip.sip
 
