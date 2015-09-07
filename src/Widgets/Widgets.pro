@@ -61,6 +61,10 @@ SOURCES += ctkPopupWidget.cpp \
     ctkMaterialPropertyPreviewLabel.cpp \
     ctkMaterialPropertyWidget.cpp \
     ctkSliderWidget.cpp \
+    ctkMatrixWidget.cpp \
+    ctkMenuButton.cpp \
+    ctkMenuComboBox.cpp \
+    ctkSearchBox.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -124,6 +128,11 @@ HEADERS += ../ctkExport.h \
     ctkMaterialPropertyPreviewLabel.h \
     ctkMaterialPropertyWidget.h \
     ctkSliderWidget.h \
+    ctkMatrixWidget.h \
+    ctkMenuButton.h \
+    ctkMenuComboBox.h \
+    ctkMenuComboBox_p.h \
+    ctkSearchBox.h \
 
 unix {
     target.path = /usr/lib
