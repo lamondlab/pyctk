@@ -140,7 +140,7 @@ if __name__=="__main__":
             install_dir=dest_pkg_dir
         )
 
-        makefile.extra_defines+=['CTK_LIBRARY','QT_CORE_LIB', 'QT_GUI_LIB', 'QT_WIDGETS_LIB']
+        makefile.extra_defines+=['CTK_LIBRARY','QT_CORE_LIB', 'QT_GUI_LIB', 'QT_WIDGETS_LIB', 'QT_XML_LIB']
         makefile.extra_include_dirs+=[
             os.path.abspath(inc_dir),
             os.path.abspath(os.path.join(inc_dir, entry)),
