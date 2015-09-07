@@ -25,8 +25,13 @@
 %Include ctkCompleter.sip
 %Include ctkConsole.sip
 %Include ctkCoordinatesWidget.sip
+%Include ctkCrosshairLabel.sip
+%Include ctkDateRangeWidget.sip
+%Include ctkDirectoryButton.sip
 
 %Include ctkDoubleSpinBox.sip
+
+%Include ctkFileDialog.sip
 
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip
