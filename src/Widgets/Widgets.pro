@@ -1,4 +1,4 @@
-QT       += widgets
+QT       += widgets xml
 
 TARGET = Widgets
 TEMPLATE = lib
@@ -54,6 +54,10 @@ SOURCES += ctkPopupWidget.cpp \
     ctkTransferFunctionRepresentation.cpp \
     ctkIconEnginePlugin.cpp \
     ctkPixmapIconEngine.cpp \
+    ctkLanguageComboBox.cpp \
+    ctkLayoutFactory.cpp \
+    ctkLayoutManager.cpp \
+    ctkLayoutViewFactory.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -110,6 +114,10 @@ HEADERS += ../ctkExport.h \
     ctkIconEnginePlugin_qt5.h \
     # ctkIconEnginePlugin_qt4.h \
     ctkPixmapIconEngine.h \
+    ctkLanguageComboBox.h \
+    ctkLayoutFactory.h \
+    ctkLayoutManager.h \
+    ctkLayoutViewFactory.h \
 
 unix {
     target.path = /usr/lib
