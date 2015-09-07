@@ -28,7 +28,7 @@
 %Include ctkCrosshairLabel.sip
 %Include ctkDateRangeWidget.sip
 %Include ctkDirectoryButton.sip
-
+%Include ctkDoubleRangeSlider.sip
 %Include ctkDoubleSpinBox.sip
 
 %Include ctkFileDialog.sip
@@ -36,3 +36,5 @@
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip
 %Include ctkPushButton.sip
+
+%Include ctkRangeSlider.sip
