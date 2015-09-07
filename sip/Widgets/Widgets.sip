@@ -54,6 +54,9 @@
 %Include ctkMatrixWidget.sip
 %Include ctkMenuButton.sip
 %Include ctkMenuComboBox.sip
+%Include ctkMessageBox.sip
+%Include ctkModalityWidget.sip
+%Include ctkPathLineEdit.sip
 
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip
