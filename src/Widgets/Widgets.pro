@@ -32,6 +32,10 @@ SOURCES += ctkPopupWidget.cpp \
     ctkConsole.cpp \
     ctkCoordinatesWidget.cpp \
     ctkDoubleSpinBox.cpp \
+    ctkCrosshairLabel.cpp \
+    ctkDateRangeWidget.cpp \
+    ctkDirectoryButton.cpp \
+    ctkFileDialog.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -64,6 +68,10 @@ HEADERS += ../ctkExport.h \
     ctkCoordinatesWidget_p.h \
     ctkDoubleSpinBox.h \
     ctkDoubleSpinBox_p.h \
+    ctkCrosshairLabel.h \
+    ctkDateRangeWidget.h \
+    ctkDirectoryButton.h \
+    ctkFileDialog.h \
 
 unix {
     target.path = /usr/lib
