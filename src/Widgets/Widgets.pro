@@ -52,6 +52,8 @@ SOURCES += ctkPopupWidget.cpp \
     ctkHistogram.cpp \
     ctkTransferFunction.cpp \
     ctkTransferFunctionRepresentation.cpp \
+    ctkIconEnginePlugin.cpp \
+    ctkPixmapIconEngine.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -104,6 +106,10 @@ HEADERS += ../ctkExport.h \
     ctkHistogram.h \
     ctkTransferFunction.h \
     ctkTransferFunctionRepresentation.h \
+    ctkIconEnginePlugin.h \
+    ctkIconEnginePlugin_qt5.h \
+    # ctkIconEnginePlugin_qt4.h \
+    ctkPixmapIconEngine.h \
 
 unix {
     target.path = /usr/lib
