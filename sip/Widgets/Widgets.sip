@@ -31,6 +31,8 @@
 %Include ctkDoubleRangeSlider.sip
 %Include ctkDoubleSlider.sip
 %Include ctkDoubleSpinBox.sip
+%Include ctkDynamicSpacer.sip
+%Include ctkErrorLogModel.sip
 
 %Include ctkFileDialog.sip
 

@@ -20,7 +20,8 @@ public:
     Error    = 0x40,
     Critical = 0x80,
     Fatal    = 0x100
-    };
+  };
+  typedef QFlags<ctkErrorLogLevel::LogLevel> LogLevels;
 
   QString operator ()(LogLevel logLevel);
 

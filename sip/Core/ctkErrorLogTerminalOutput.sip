@@ -16,6 +16,7 @@ public:
     StandardOutput  = 0x2,
     All             = 0x3 // StandardError | StandardOutput
   };
+  typedef QFlags<ctkErrorLogTerminalOutput::TerminalOutput> TerminalOutputs;
 
   bool enabled() const;
   void setEnabled(bool value);
