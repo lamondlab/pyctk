@@ -42,11 +42,13 @@
 %Include ctkFlowLayout.sip
 %Include ctkFontButton.sip
 %Include ctkHistogram.sip
-
+%Include ctkIconEnginePlugin.sip
 
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip
 %Include ctkPushButton.sip
+
+%Include ctkPixmapIconEngine.sip
 
 %Include ctkRangeSlider.sip
 
