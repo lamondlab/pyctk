@@ -35,8 +35,14 @@
 %Include ctkErrorLogModel.sip
 %Include ctkErrorLogWidget.sip
 %Include ctkExpandableWidget.sip
-
+%Include ctkExpandButton.sip
 %Include ctkFileDialog.sip
+%Include ctkFittedTextBrowser.sip
+%Include ctkFlatProxyModel.sip
+%Include ctkFlowLayout.sip
+%Include ctkFontButton.sip
+%Include ctkHistogram.sip
+
 
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip
@@ -45,3 +51,6 @@
 %Include ctkRangeSlider.sip
 
 %Include ctkSizeGrip.sip
+
+%Include ctkTransferFunction.sip
+%Include ctkTransferFunctionRepresentation.sip
