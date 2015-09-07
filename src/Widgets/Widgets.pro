@@ -58,6 +58,9 @@ SOURCES += ctkPopupWidget.cpp \
     ctkLayoutFactory.cpp \
     ctkLayoutManager.cpp \
     ctkLayoutViewFactory.cpp \
+    ctkMaterialPropertyPreviewLabel.cpp \
+    ctkMaterialPropertyWidget.cpp \
+    ctkSliderWidget.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -118,6 +121,9 @@ HEADERS += ../ctkExport.h \
     ctkLayoutFactory.h \
     ctkLayoutManager.h \
     ctkLayoutViewFactory.h \
+    ctkMaterialPropertyPreviewLabel.h \
+    ctkMaterialPropertyWidget.h \
+    ctkSliderWidget.h \
 
 unix {
     target.path = /usr/lib

@@ -49,6 +49,8 @@
 %Include ctkLayoutManager.sip
 %Include ctkLayoutManagerPrivate.sip
 %Include ctkLayoutViewFactory.sip
+%Include ctkMaterialPropertyPreviewLabel.sip
+%Include ctkMaterialPropertyWidget.sip
 
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip
@@ -59,6 +61,8 @@
 %Include ctkRangeSlider.sip
 
 %Include ctkSizeGrip.sip
+
+%Include ctkSliderWidget.sip
 
 %Include ctkTransferFunction.sip
 %Include ctkTransferFunctionRepresentation.sip
