@@ -4,6 +4,7 @@
 
 %Import QtGui/QtGuimod.sip
 %Import QtWidgets/QtWidgetsmod.sip
+%Import QtXml/QtXmlmod.sip
 
 %Import Core/Core.sip
 
@@ -43,6 +44,11 @@
 %Include ctkFontButton.sip
 %Include ctkHistogram.sip
 %Include ctkIconEnginePlugin.sip
+%Include ctkLanguageComboBox.sip
+%Include ctkLayoutFactory.sip
+%Include ctkLayoutManager.sip
+%Include ctkLayoutManagerPrivate.sip
+%Include ctkLayoutViewFactory.sip
 
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip

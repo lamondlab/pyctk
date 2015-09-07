@@ -165,6 +165,7 @@ if __name__=="__main__":
                 os.path.join(qtconfig.QT_INSTALL_LIBS,'QtCore.framework','Headers'),
                 os.path.join(qtconfig.QT_INSTALL_LIBS,'QtGui.framework','Headers'),
                 os.path.join(qtconfig.QT_INSTALL_LIBS,'QtWidgets.framework','Headers'),
+                os.path.join(qtconfig.QT_INSTALL_LIBS,'QtXml.framework','Headers'),
             ]
 
             makefile.extra_lflags+=[      
@@ -172,6 +173,7 @@ if __name__=="__main__":
                 "-framework QtWidgets",
                 "-framework QtGui",
                 "-framework QtCore",
+                "-framework QtXml",
                 "-framework DiskArbitration",
                 "-framework IOKit",
                 "-framework OpenGL",
@@ -183,9 +185,10 @@ if __name__=="__main__":
                 os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtCore"),
                 os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtGui"),
                 os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtWidgets"),
+                os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtXml"),
             ]
             makefile.extra_lib_dirs+=[os.path.join('..','..','src',entry,'release')]
-            makefile.extra_libs+=['Qt5Core','Qt5Gui','Qt5Widgets','dbghelp']
+            makefile.extra_libs+=['Qt5Core','Qt5Gui','Qt5Widgets','Qt5Xml','dbghelp']
             makefile.extra_lflags+=['/IGNORE:4217,4049']
             makefile.extra_lflags+=['/LIBPATH:{}'.format(os.path.join('..','..','src',entry,'release'))]
 
