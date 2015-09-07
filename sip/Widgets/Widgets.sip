@@ -33,6 +33,8 @@
 %Include ctkDoubleSpinBox.sip
 %Include ctkDynamicSpacer.sip
 %Include ctkErrorLogModel.sip
+%Include ctkErrorLogWidget.sip
+%Include ctkExpandableWidget.sip
 
 %Include ctkFileDialog.sip
 
@@ -41,3 +43,5 @@
 %Include ctkPushButton.sip
 
 %Include ctkRangeSlider.sip
+
+%Include ctkSizeGrip.sip
