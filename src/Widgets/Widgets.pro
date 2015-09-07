@@ -44,6 +44,14 @@ SOURCES += ctkPopupWidget.cpp \
     ctkErrorLogWidget.cpp \
     ctkExpandableWidget.cpp \
     ctkSizeGrip.cpp \
+    ctkExpandButton.cpp \
+    ctkFittedTextBrowser.cpp \
+    ctkFlatProxyModel.cpp \
+    ctkFlowLayout.cpp \
+    ctkFontButton.cpp \
+    ctkHistogram.cpp \
+    ctkTransferFunction.cpp \
+    ctkTransferFunctionRepresentation.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -88,6 +96,14 @@ HEADERS += ../ctkExport.h \
     ctkErrorLogWidget.h \
     ctkExpandableWidget.h \
     ctkSizeGrip.h \
+    ctkExpandButton.h \
+    ctkFittedTextBrowser.h \
+    ctkFlatProxyModel.h \
+    ctkFlowLayout.h \
+    ctkFontButton.h \
+    ctkHistogram.h \
+    ctkTransferFunction.h \
+    ctkTransferFunctionRepresentation.h \
 
 unix {
     target.path = /usr/lib
