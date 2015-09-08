@@ -59,16 +59,18 @@
 %Include ctkPathLineEdit.sip
 %Include ctkPathListButtonsWidget.sip
 %Include ctkPathListWidget.sip
-
+%Include ctkPixmapIconEngine.sip
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip
 %Include ctkPushButton.sip
-
-%Include ctkPixmapIconEngine.sip
-
+%Include ctkQImageView.sip
 %Include ctkRangeSlider.sip
-
+%Include ctkRangeWidget.sip
+%Include ctkScreenshotDialog.sip
 %Include ctkSearchBox.sip
+%Include ctkSettings.sip
+%Include ctkSettingsDialog.sip
+%Include ctkSettingsPanel.sip
 
 %Include ctkSizeGrip.sip
 
