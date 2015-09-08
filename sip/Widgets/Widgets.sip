@@ -71,10 +71,11 @@
 %Include ctkSettings.sip
 %Include ctkSettingsDialog.sip
 %Include ctkSettingsPanel.sip
-
+//%Include ctkSignalMapper.sip
 %Include ctkSizeGrip.sip
-
 %Include ctkSliderWidget.sip
+%Include ctkTemplateWidget.sip
+%Include ctkTestApplication.sip
 
 %Include ctkTransferFunction.sip
 %Include ctkTransferFunctionRepresentation.sip
