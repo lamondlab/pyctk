@@ -68,6 +68,8 @@ SOURCES += ctkPopupWidget.cpp \
     ctkMessageBox.cpp \
     ctkModalityWidget.cpp \
     ctkPathLineEdit.cpp \
+    ctkPathListButtonsWidget.cpp \
+    ctkPathListWidget.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -139,6 +141,9 @@ HEADERS += ../ctkExport.h \
     ctkMessageBox.h \
     ctkModalityWidget.h \
     ctkPathLineEdit.h \
+    ctkPathListButtonsWidget_p.h \
+    ctkPathListButtonsWidget.h \
+    ctkPathListWidget.h \
 
 unix {
     target.path = /usr/lib
