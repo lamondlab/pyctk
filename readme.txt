@@ -20,3 +20,4 @@ Known Issues/Comments
 17. ctkDoubleSpinBox: coordinatesChanged(double*) takes unsupported type as argument.
 18. ctkTransferFunction: need to write recipe for qreal[].
 19. ctkIconEnginePlugin: cannot wrap as QIconEnginePlugin is not wrapped by PyQt5(?).
+20. ctkRangeWidget: range() ommited until I work out how to wrap double arrays.

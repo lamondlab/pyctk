@@ -70,6 +70,12 @@ SOURCES += ctkPopupWidget.cpp \
     ctkPathLineEdit.cpp \
     ctkPathListButtonsWidget.cpp \
     ctkPathListWidget.cpp \
+    ctkQImageView.cpp \
+    ctkRangeWidget.cpp \
+    ctkScreenshotDialog.cpp \
+    ctkSettings.cpp \
+    ctkSettingsDialog.cpp \
+    ctkSettingsPanel.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -144,6 +150,13 @@ HEADERS += ../ctkExport.h \
     ctkPathListButtonsWidget_p.h \
     ctkPathListButtonsWidget.h \
     ctkPathListWidget.h \
+    ctkQImageView.h \
+    ctkRangeWidget.h \
+    ctkScreenshotDialog.h \
+    ctkScreenshotDialog_p.h \
+    ctkSettings.h \
+    ctkSettingsDialog.h \
+    ctkSettingsPanel.h \
 
 unix {
     target.path = /usr/lib
