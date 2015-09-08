@@ -57,6 +57,8 @@
 %Include ctkMessageBox.sip
 %Include ctkModalityWidget.sip
 %Include ctkPathLineEdit.sip
+%Include ctkPathListButtonsWidget.sip
+%Include ctkPathListWidget.sip
 
 %Include ctkPopupWidget.sip
 //%Include ctkProxyStyle.sip
