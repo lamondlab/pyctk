@@ -1,0 +1,7 @@
+build.*
+cleanup.*
+rebuild.*
+*.o
+*.lib
+*.dylib
+moc_*.cpp
