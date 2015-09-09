@@ -90,6 +90,7 @@ SOURCES += ctkPopupWidget.cpp \
     ctkTransferFunctionScene.cpp \
     ctkTransferFunctionView.cpp \
     ctkTreeComboBox.cpp \
+    ctkWidgetsUtils.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -185,6 +186,7 @@ HEADERS += ../ctkExport.h \
     ctkTransferFunctionScene.h \
     ctkTransferFunctionView.h \
     ctkTreeComboBox.h \
+    ctkWidgetsUtils.h \
 
 unix {
     target.path = /usr/lib
