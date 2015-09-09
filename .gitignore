@@ -1,6 +1,7 @@
 build.*
 cleanup.*
 rebuild.*
+add_headers.py
 *.o
 *.lib
 *.dylib

@@ -1,0 +1,12 @@
+PyCTK
+Copyright (c) 2015 Lamond Lab
+
+This product includes software developed at
+the Lamond Lab (http://www.lamondlab.com/).
+
+This software contains code developed by Kitware
+as part of the CTK: The Common Toolkit. This code
+consists of the C++ code in the src directory and
+has been modified as part of the PyCTK library's
+development, namely changes to #include directives
+and symbol export macros.
