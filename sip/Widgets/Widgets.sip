@@ -77,6 +77,7 @@
 %Include ctkTemplateWidget.sip
 %Include ctkTestApplication.sip
 %Include ctkThumbnailLabel.sip
+%Include ctkThumbnailListWidget.sip
 
 %Include ctkTransferFunction.sip
 %Include ctkTransferFunctionRepresentation.sip
