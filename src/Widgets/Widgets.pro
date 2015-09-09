@@ -86,7 +86,7 @@ SOURCES += ctkPopupWidget.cpp \
     ctkTransferFunctionControlPointsItem.cpp \
     ctkTransferFunctionGradientItem.cpp \
     ctkTransferFunctionItem.cpp \
-    ctkTransferFunctionNativeItem.cpp \
+    # ctkTransferFunctionNativeItem.cpp \
     ctkTransferFunctionScene.cpp \
     ctkTransferFunctionView.cpp \
 
@@ -180,7 +180,7 @@ HEADERS += ../ctkExport.h \
     ctkTransferFunctionControlPointsItem.h \
     ctkTransferFunctionGradientItem.h \
     ctkTransferFunctionItem.h \
-    ctkTransferFunctionNativeItem.h \
+    # ctkTransferFunctionNativeItem.h \
     ctkTransferFunctionScene.h \
     ctkTransferFunctionView.h \
 

@@ -187,6 +187,7 @@ if __name__=="__main__":
                 os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtGui"),
                 os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtWidgets"),
                 os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtXml"),
+                os.path.join(qtconfig.QT_INSTALL_HEADERS, "QtOpenGL"),
             ]
             makefile.extra_lib_dirs+=[os.path.join('..','..','src',entry,'release')]
             makefile.extra_libs+=['Qt5Core','Qt5Gui','Qt5Widgets','Qt5Xml','Qt5OpenGL','dbghelp']

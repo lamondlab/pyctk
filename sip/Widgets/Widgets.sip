@@ -84,7 +84,7 @@
 %Include ctkTransferFunctionControlPointsItem.sip
 %Include ctkTransferFunctionGradientItem.sip
 %Include ctkTransferFunctionItem.sip
-%Include ctkTransferFunctionNativeItem.sip
+//%Include ctkTransferFunctionNativeItem.sip
 %Include ctkTransferFunctionRepresentation.sip
 %Include ctkTransferFunctionScene.sip
 %Include ctkTransferFunctionView.sip
