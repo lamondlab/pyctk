@@ -5,3 +5,11 @@ rebuild.*
 *.lib
 *.dylib
 moc_*.cpp
+sip*.cpp
+*.so
+Makefile
+PyCTK/*
+modules/*
+ui_*.h
+qrc_*.h
+.qmake.stash
