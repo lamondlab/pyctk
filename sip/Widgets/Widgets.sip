@@ -90,3 +90,10 @@
 %Include ctkTransferFunctionView.sip
 %Include ctkTreeComboBox.sip
 %Include ctkWidgetsUtils.sip
+%Include ctkWorkflowAbstractPagedWidget.sip
+%Include ctkWorkflowButtonBoxWidget.sip
+%Include ctkWorkflowGroupBox.sip
+%Include ctkWorkflowStackedWidget.sip
+%Include ctkWorkflowTabWidget.sip
+%Include ctkWorkflowWidget.sip
+%Include ctkWorkflowWidgetStep.sip

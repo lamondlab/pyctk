@@ -91,6 +91,13 @@ SOURCES += ctkPopupWidget.cpp \
     ctkTransferFunctionView.cpp \
     ctkTreeComboBox.cpp \
     ctkWidgetsUtils.cpp \
+    ctkWorkflowAbstractPagedWidget.cpp \
+    ctkWorkflowButtonBoxWidget.cpp \
+    ctkWorkflowGroupBox.cpp \
+    ctkWorkflowStackedWidget.cpp \
+    ctkWorkflowTabWidget.cpp \
+    ctkWorkflowWidget.cpp \
+    ctkWorkflowWidgetStep.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -187,6 +194,14 @@ HEADERS += ../ctkExport.h \
     ctkTransferFunctionView.h \
     ctkTreeComboBox.h \
     ctkWidgetsUtils.h \
+    ctkWorkflowAbstractPagedWidget.h \
+    ctkWorkflowButtonBoxWidget.h \
+    ctkWorkflowGroupBox.h \
+    ctkWorkflowStackedWidget.h \
+    ctkWorkflowTabWidget.h \
+    ctkWorkflowWidget.h \            
+    ctkWorkflowWidgetStep.h \ 
+    ctkWorkflowWidgetStep_p.h \
 
 unix {
     target.path = /usr/lib
