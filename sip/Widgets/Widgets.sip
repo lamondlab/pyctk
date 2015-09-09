@@ -78,6 +78,7 @@
 %Include ctkTestApplication.sip
 %Include ctkThumbnailLabel.sip
 %Include ctkThumbnailListWidget.sip
+%Include ctkToolTipTrapper.sip
 
 %Include ctkTransferFunction.sip
 %Include ctkTransferFunctionRepresentation.sip

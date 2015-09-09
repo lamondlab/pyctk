@@ -81,6 +81,7 @@ SOURCES += ctkPopupWidget.cpp \
     ctkTestApplication.cpp \
     ctkThumbnailLabel.cpp \
     ctkThumbnailListWidget.cpp \
+    ctkToolTipTrapper.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -167,6 +168,7 @@ HEADERS += ../ctkExport.h \
     ctkTestApplication.h \
     ctkThumbnailLabel.h \
     ctkThumbnailListWidget.h \
+    ctkToolTipTrapper.h \
 
 unix {
     target.path = /usr/lib
