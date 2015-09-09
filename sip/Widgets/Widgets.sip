@@ -88,3 +88,4 @@
 %Include ctkTransferFunctionRepresentation.sip
 %Include ctkTransferFunctionScene.sip
 %Include ctkTransferFunctionView.sip
+%Include ctkTreeComboBox.sip
