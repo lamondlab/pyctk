@@ -1,4 +1,4 @@
-QT       += widgets xml
+QT       += widgets xml opengl
 
 TARGET = Widgets
 TEMPLATE = lib
@@ -82,6 +82,13 @@ SOURCES += ctkPopupWidget.cpp \
     ctkThumbnailLabel.cpp \
     ctkThumbnailListWidget.cpp \
     ctkToolTipTrapper.cpp \
+    ctkTransferFunctionBarsItem.cpp \
+    ctkTransferFunctionControlPointsItem.cpp \
+    ctkTransferFunctionGradientItem.cpp \
+    ctkTransferFunctionItem.cpp \
+    ctkTransferFunctionNativeItem.cpp \
+    ctkTransferFunctionScene.cpp \
+    ctkTransferFunctionView.cpp \
 
 HEADERS += ../ctkExport.h \
     ../ctkPimpl.h \
@@ -169,6 +176,13 @@ HEADERS += ../ctkExport.h \
     ctkThumbnailLabel.h \
     ctkThumbnailListWidget.h \
     ctkToolTipTrapper.h \
+    ctkTransferFunctionBarsItem.h \
+    ctkTransferFunctionControlPointsItem.h \
+    ctkTransferFunctionGradientItem.h \
+    ctkTransferFunctionItem.h \
+    ctkTransferFunctionNativeItem.h \
+    ctkTransferFunctionScene.h \
+    ctkTransferFunctionView.h \
 
 unix {
     target.path = /usr/lib

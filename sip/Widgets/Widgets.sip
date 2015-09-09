@@ -79,6 +79,12 @@
 %Include ctkThumbnailLabel.sip
 %Include ctkThumbnailListWidget.sip
 %Include ctkToolTipTrapper.sip
-
 %Include ctkTransferFunction.sip
+%Include ctkTransferFunctionBarsItem.sip
+%Include ctkTransferFunctionControlPointsItem.sip
+%Include ctkTransferFunctionGradientItem.sip
+%Include ctkTransferFunctionItem.sip
+%Include ctkTransferFunctionNativeItem.sip
 %Include ctkTransferFunctionRepresentation.sip
+%Include ctkTransferFunctionScene.sip
+%Include ctkTransferFunctionView.sip

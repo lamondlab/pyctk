@@ -22,3 +22,4 @@ Known Issues/Comments
 19. ctkIconEnginePlugin: cannot wrap as QIconEnginePlugin is not wrapped by PyQt5(?).
 20. ctkRangeWidget: range() ommited until I work out how to wrap double arrays.
 21. ctkSignalMapper: unresolved symbol issue.
+22. ctkTransferFunctionItem: unresolved symbol issue with protected color() methods.
