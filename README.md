@@ -2,6 +2,10 @@ PyCTK
 =====
 Python bindings for the Qt widgets provided by CTK: The Common Toolkit, a set of common support code for medical imaging, surgical navigation, and related purposes.
 
+Documentation
+-------------
+Please refer to the CTK C++ documentation available here: http://www.commontk.org/docs/html/classes.html
+
 Known Issues/Comments
 ---------------------
 
