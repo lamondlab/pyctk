@@ -2,6 +2,26 @@ PyCTK
 =====
 Python bindings for the Qt widgets provided by CTK: The Common Toolkit, a set of common support code for medical imaging, surgical navigation, and related purposes.
 
+Building
+--------
+To build these bindings you will need to have a working copy of [Qt](http://www.qt.io "Qt") (with qmake), [SIP](https://www.riverbankcomputing.com/software/sip/intro "SIP") and [PyQt5](https://www.riverbankcomputing.com/software/pyqt/intro "PyQt5") installed and preferably on your path. 
+
+### MacOSX
+This build has been tested on OSX 10.10.4 (Yosemite) with Python 3.4.3, Qt 5.4, SIP 4.16.8 and PyQt5.4.2 using the clang_64 (clang-602.0.53) compiler.
+
+To build run:
+
+	$ python configure.py
+	$ make
+
+### Windows
+This build has been tested on Windows 7 Professional SP1 (64bit) with Python 3.4.2 (32bit), Qt 5.4, SIP 4.16.8 and PyQt5.4.2 using the Microsoft Visual Studio 2010 (x86) compiler.
+
+To build run the following from the Visual Studio Command Prompt (2010):
+
+	> python configure.py
+	> nmake
+
 Documentation
 -------------
 Please refer to the CTK C++ documentation available here: http://www.commontk.org/docs/html/classes.html
