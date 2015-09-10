@@ -216,7 +216,7 @@ if __name__=="__main__":
             makefile.extra_lflags+=['/LIBPATH:{}'.format(os.path.join('..','..','src',entry,'release'))]
 
             if entry!="Core":
-                    makefile.extra_lflags+=['/LIBPATH:{}'.format(os.path.join('..','..','src','Core','release'))]
+                 makefile.extra_lflags+=['/LIBPATH:{}'.format(os.path.join('..','..','src','Core','release'))]
         makefile.generate()
 
         output_dirs.append(output_dir)

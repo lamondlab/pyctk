@@ -223,6 +223,7 @@ HEADERS += ../ctkExport.h \
     ctkWorkflowWidget.h \            
     ctkWorkflowWidgetStep.h \ 
     ctkWorkflowWidgetStep_p.h \
+    ctkWidgets.h
 
 unix {
     target.path = /usr/lib
