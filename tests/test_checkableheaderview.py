@@ -25,55 +25,38 @@ from PyQt5.QtWidgets import *
 
 from PyCTK.Widgets import ctkCheckableHeaderView
 
-class Model(QAbstractTableModel):
-    def __init__(self, parent=None, **kwargs):
-        super().__init__(parent, **kwargs)
-
-        self._check=[[Qt.Checked]*5]*10
-
-    def data(self, index, role=Qt.DisplayRole):
-        if not index.isValid(): return None
-        if role==Qt.DisplayRole:
-            return "({},{})".format(index.row(), index.column())
-        elif role==Qt.CheckStateRole: return self._check[index.row()][index.column()]
-        return None
-
-    def columnCount(self, parent=QModelIndex()): return 5
-
-    def flags(self, index):
-        if not index.isValid(): return None
-        return super().flags(index)|Qt.ItemIsUserCheckable
-
-    def rowCount(self, parent=QModelIndex()): return 10
-
-    def setData(self, index, value, role):
-        if not index.isValid() or role!=Qt.CheckStateRole: return False
-        self._check[index.row()][index.column()]=value
-        self.dataChanged.emit(index, index)
-        return True
-
-class Widget(QWidget):
-    def __init__(self, parent=None, **kwargs):
-        super().__init__(parent, **kwargs)
-
-        self._model=Model(self)
-        self._view=QTableView(self)
-        self._view.setModel(self._model)
-
-        self._horizontalHeader=ctkCheckableHeaderView(Qt.Horizontal, self._view)
-        self._view.setHorizontalHeader(self._horizontalHeader)
-
-        # self._verticalHeader=ctkCheckableHeaderView(Qt.Vertical, self._view)
-        # self._view.setVerticalHeader(self._verticalHeader)
-
-        QVBoxLayout(self).addWidget(self._view)
-
 if __name__=="__main__":
     from sys import argv, exit
-    
-    a=QApplication(argv)
-    w=Widget()
-    w.show()
-    w.raise_()
 
-    exit(a.exec_()) 
+    a=QApplication(argv)
+
+    model=QStandardItemModel()
+    row0=[QStandardItem("Not User Checkable")]
+    model.appendRow(row0)
+
+    row1=[QStandardItem("User Checkable")]
+    row1[0].setCheckable(True)
+    model.appendRow(row1)
+
+    row2=[QStandardItem("User Checkable")]
+    row2[0].setCheckable(True)
+    model.appendRow(row2)
+
+    table=QTableView()
+    table.setModel(model)
+
+    model.setHeaderData(0, Qt.Horizontal, Qt.Checked, Qt.CheckStateRole)
+
+    previousHeaderView=table.horizontalHeader()
+    oldClickable=previousHeaderView.sectionsClickable()
+
+    headerView=ctkCheckableHeaderView(Qt.Horizontal, table)
+    headerView.setSectionsClickable(oldClickable)
+    headerView.setSectionsMovable(previousHeaderView.sectionsMovable())
+    headerView.setHighlightSections(previousHeaderView.highlightSections())
+    table.setHorizontalHeader(headerView)
+
+    table.show()
+    table.raise_()
+
+    exit(a.exec_())
