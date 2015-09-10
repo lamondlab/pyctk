@@ -29,6 +29,14 @@
 
 %Import Core/Core.sip
 
+%ModuleHeaderCode
+#include "ctkWidgets.h"
+%End
+
+%InitialisationCode
+initCtkWidgetsResources();
+%End
+
 %Include ctkActionsWidget.sip
 %Include ctkAddRemoveComboBox.sip
 %Include ctkAxesWidget.sip
