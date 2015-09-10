@@ -27,7 +27,7 @@ from PyCTK.Widgets import ctkPopupWidget as PopupWidget
 
 class Widget(QWidget):
     def __init__(self, parent=None, **kwargs):
-        QWidget.__init__(self, parent, **kwargs)
+        super().__init__(parent, **kwargs)
 
         l=QVBoxLayout(self)
         spinBox=QSpinBox(self, maximumWidth=100)
@@ -65,6 +65,7 @@ class Widget(QWidget):
 
 if __name__=="__main__":
     from sys import argv, exit
+    
     a=QApplication(argv)
     w=Widget()
     w.show()

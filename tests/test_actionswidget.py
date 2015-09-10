@@ -1,7 +1,7 @@
 # ===========================================================================
 #
 #   Library:  PyCTK
-#   Filename: test_addremovecombobox.py
+#   Filename: test_popupwidget.py
 #
 #   Copyright (c) 2015 Lamond Lab
 #
@@ -23,15 +23,27 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
-from PyCTK.Widgets import ctkAddRemoveComboBox as ComboBox
+from PyCTK.Widgets import ctkActionsWidget
 
 class Widget(QWidget):
     def __init__(self, parent=None, **kwargs):
         super().__init__(parent, **kwargs)
 
+        self._actions=[
+            QAction(
+                "Action {}".format(i),
+                self,
+                shortcut="Ctrl+{}".format(i),
+                toolTip="My action number {}".format(i)
+            )
+            for i in range(10)
+        ]
+
+
         l=QVBoxLayout(self)
-        self._combo=ComboBox(self)
-        l.addWidget(self._combo)
+        self._actionsWidget=ctkActionsWidget(self)
+        self._actionsWidget.addActions(self._actions)
+        l.addWidget(self._actionsWidget)
 
 if __name__=="__main__":
     from sys import argv, exit
@@ -41,4 +53,4 @@ if __name__=="__main__":
     w.show()
     w.raise_()
 
-    exit(a.exec_())
+    exit(a.exec_()) 
