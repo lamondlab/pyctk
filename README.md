@@ -8,7 +8,7 @@ Please refer to the CTK C++ documentation available here: http://www.commontk.or
 
 Examples/Tests
 --------------
-Teting currently consists of running the example code in the [test](/test/) directory.
+Teting currently consists of running the example code in the [tests](/tests/) directory.
 
 Known Issues/Comments
 ---------------------
