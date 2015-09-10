@@ -1,5 +1,9 @@
+PyCTK
+=====
+Python bindings for the Qt widgets provided by CTK: The Common Toolkit, a set of common support code for medical imaging, surgical navigation, and related purposes.
+
 Known Issues/Comments
-=====================
+---------------------
 
 1. ctkBackTrace: ~ctkBackTrace() should throw().
 2. ctkBinaryFileDescriptor: commented out until I work out how to install binutils (<bfd.h>).
