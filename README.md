@@ -6,6 +6,10 @@ Documentation
 -------------
 Please refer to the CTK C++ documentation available here: http://www.commontk.org/docs/html/classes.html
 
+Examples/Tests
+--------------
+Teting currently consists of running the example code in the [test](/test/) directory.
+
 Known Issues/Comments
 ---------------------
 

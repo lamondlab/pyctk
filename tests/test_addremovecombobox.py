@@ -23,7 +23,17 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWidgets import *
 
-from PyCTK.Widgets import ctkAddRemoveComboBox as ComboBox
+from PyCTK.Widgets import ctkAddRemoveComboBox
+
+class ComboBox(ctkAddRemoveComboBox):
+    @pyqtSlot()
+    def onAdd(self): print("Add")
+
+    @pyqtSlot()
+    def onEdit(self): print("Edit")
+
+    @pyqtSlot()
+    def onRemove(self): self.removeCurrentItem()
 
 class Widget(QWidget):
     def __init__(self, parent=None, **kwargs):
@@ -31,6 +41,13 @@ class Widget(QWidget):
 
         l=QVBoxLayout(self)
         self._combo=ComboBox(self)
+        self._combo.setAddEnabled(True)
+        self._combo.setEditEnabled(True)
+        self._combo.setRemoveEnabled(True)
+
+        for i in range(10):
+            self._combo.addItem("Item {}".format(i), i)
+
         l.addWidget(self._combo)
 
 if __name__=="__main__":

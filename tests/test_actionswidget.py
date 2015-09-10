@@ -1,7 +1,7 @@
 # ===========================================================================
 #
 #   Library:  PyCTK
-#   Filename: test_popupwidget.py
+#   Filename: test_actionswidget.py
 #
 #   Copyright (c) 2015 Lamond Lab
 #
