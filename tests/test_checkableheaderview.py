@@ -54,6 +54,8 @@ if __name__=="__main__":
     headerView.setSectionsClickable(oldClickable)
     headerView.setSectionsMovable(previousHeaderView.sectionsMovable())
     headerView.setHighlightSections(previousHeaderView.highlightSections())
+    helper=headerView.checkableModelHelper()
+    helper.setPropagateDepth(0)
     table.setHorizontalHeader(headerView)
 
     table.show()
