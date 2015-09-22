@@ -19,24 +19,20 @@
 
 =========================================================================*/
 
-class ctkProxyStyle : public QProxyStyle
-{
+class ctkProxyStyle : public QProxyStyle {
 
 %TypeHeaderCode
-#include "QProxyStyle.h"
 #include "ctkProxyStyle.h"
 %End
 
 public:
-  ctkProxyStyle(QStyle *baseStyle = 0, QObject* parent /TransferThis/ = 0);
+  ctkProxyStyle(QStyle *baseStyle = 0, QObject *parent /TransferThis/ = 0);
   virtual ~ctkProxyStyle();
-
-  void ensureBaseStyle()const;
+  void ensureBaseStyle() const;
   virtual void drawPrimitive(PrimitiveElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget = 0) const;
   virtual void drawControl(ControlElement element, const QStyleOption *option, QPainter *painter, const QWidget *widget = 0) const;
   virtual void drawComplexControl(ComplexControl control, const QStyleOptionComplex *option, QPainter *painter, const QWidget *widget = 0) const;
-  virtual void drawItemText(QPainter *painter, const QRect &rect, int flags, const QPalette &pal, bool enabled,
-                            const QString &text, QPalette::ColorRole textRole = QPalette::NoRole) const;
+  virtual void drawItemText(QPainter *painter, const QRect &rect, int flags, const QPalette &pal, bool enabled, const QString &text, QPalette::ColorRole textRole = QPalette::NoRole) const;
   virtual void drawItemPixmap(QPainter *painter, const QRect &rect, int alignment, const QPixmap &pixmap) const;
   virtual QSize sizeFromContents(ContentsType type, const QStyleOption *option, const QSize &size, const QWidget *widget) const;
   virtual QRect subElementRect(SubElement element, const QStyleOption *option, const QWidget *widget) const;
@@ -58,11 +54,13 @@ public:
 protected:
   virtual bool event(QEvent *e);
 
-protected Q_SLOTS:
+protected slots:
   virtual QIcon standardIconImplementation(StandardPixmap standardIcon, const QStyleOption *option, const QWidget *widget) const;
-  virtual int layoutSpacingImplementation(QSizePolicy::ControlType control1, QSizePolicy::ControlType control2,
-                                  Qt::Orientation orientation, const QStyleOption *option = 0, const QWidget *widget = 0) const;
+  virtual int layoutSpacingImplementation(QSizePolicy::ControlType control1, QSizePolicy::ControlType control2, Qt::Orientation orientation, const QStyleOption *option = 0, const QWidget *widget = 0) const;
+
 private:
   ctkProxyStyle(const ctkProxyStyle &);
-  ctkProxyStyle &operator=(const ctkProxyStyle &); 
+  ctkProxyStyle &operator=(const ctkProxyStyle &);
+
 };
+

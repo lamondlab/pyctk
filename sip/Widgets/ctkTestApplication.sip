@@ -19,15 +19,14 @@
 
 =========================================================================*/
 
-class ctkTestApplication : public QObject
-{
+class ctkTestApplication : public QObject {
 
 %TypeHeaderCode
 #include "ctkTestApplication.h"
 %End
-  
+
 public:
-  //ctkTestApplication(int _argc, char** _argv);
+//ctkTestApplication(int _argc, char** _argv);
   ctkTestApplication(SIP_PYLIST argv /DocType="list-of-str"/) /PostHook=__pyQtQAppHook__/ [(int &argc, char **argv)];
 %MethodCode
         // The Python interface is a list of argument strings that is modified.
@@ -53,29 +52,25 @@ public:
         }
 %End  
   ~ctkTestApplication();
-
   virtual void runTest();
-  static int exec(bool reportErrorsOnExit=false);
-
+  static int exec(bool reportErrorsOnExit = false);
+  //static void messageHandler(QtMsgType type, const char *msg);
   static void messageHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg);
   static void delay(int ms);
-  static bool simulateEvent(QWidget* w, QEvent* e);
-  static void keyUp(QWidget* w, Qt::Key key, Qt::KeyboardModifiers mod, int ms);
-  static void keyDown(QWidget* w, Qt::Key key, Qt::KeyboardModifiers mod, int ms);
-  static void keyClick(QWidget* w, Qt::Key key, Qt::KeyboardModifiers mod, int ms);
-  static void mouseDown(QWidget* w, QPoint pos, Qt::MouseButton btn, 
-                        Qt::KeyboardModifiers mod, int ms); 
-  static void mouseUp(QWidget* w, QPoint pos, Qt::MouseButton btn, 
-                      Qt::KeyboardModifiers mod, int ms); 
-  static void mouseMove(QWidget* w, QPoint pos, Qt::MouseButton btn, 
-                        Qt::KeyboardModifiers mod, int ms);
-  static void mouseClick(QWidget* w, QPoint pos, Qt::MouseButton btn, 
-                         Qt::KeyboardModifiers mod, int ms);
-  static void mouseDClick(QWidget* w, QPoint pos, Qt::MouseButton btn, 
-                          Qt::KeyboardModifiers mod, int ms);
+  static bool simulateEvent(QWidget *w, QEvent *e);
+  static void keyUp(QWidget *w, Qt::Key key, Qt::KeyboardModifiers mod, int ms);
+  static void keyDown(QWidget *w, Qt::Key key, Qt::KeyboardModifiers mod, int ms);
+  static void keyClick(QWidget *w, Qt::Key key, Qt::KeyboardModifiers mod, int ms);
+  static void mouseDown(QWidget *w, QPoint pos, Qt::MouseButton btn, Qt::KeyboardModifiers mod, int ms);
+  static void mouseUp(QWidget *w, QPoint pos, Qt::MouseButton btn, Qt::KeyboardModifiers mod, int ms);
+  static void mouseMove(QWidget *w, QPoint pos, Qt::MouseButton btn, Qt::KeyboardModifiers mod, int ms);
+  static void mouseClick(QWidget *w, QPoint pos, Qt::MouseButton btn, Qt::KeyboardModifiers mod, int ms);
+  static void mouseDClick(QWidget *w, QPoint pos, Qt::MouseButton btn, Qt::KeyboardModifiers mod, int ms);
 
-public Q_SLOTS:
-  void runTestSlot(); 
+public slots:
+  void runTestSlot();
+
+
 };
 
 %ModuleHeaderCode

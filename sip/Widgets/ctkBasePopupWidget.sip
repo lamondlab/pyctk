@@ -19,59 +19,66 @@
 
 =========================================================================*/
 
-class ctkBasePopupWidget : QFrame {
+class ctkBasePopupWidget : public QFrame {
 
 %TypeHeaderCode
 #include "ctkBasePopupWidget.h"
 %End
 
 public:
-    ctkBasePopupWidget(QWidget *parent /TransferThis/ = 0);
-    ~ctkBasePopupWidget();
+  enum AnimationEffect {
+    WindowOpacityFadeEffect=0,
+    ScrollEffect=1,
+    FadeEffect=2,
+  };
 
-    QWidget* baseWidget() const;
+  enum VerticalDirection {
+    TopToBottom=1,
+    BottomToTop=2,
+  };
 
-    enum AnimationEffect
-    {
-        WindowOpacityFadeEffect,
-        ScrollEffect,
-        FadeEffect
-    };
-
-    AnimationEffect animationEffect() const;
-    void setAnimationEffect(AnimationEffect);
-    int effectDuration() const;
-    void setEffectDuration(int);
-    QEasingCurve::Type easingCurve() const;
-    void setEasingCurve(QEasingCurve::Type);
-    Qt::Alignment alignment() const;
-    void setAlignment(Qt::Alignment);
-    Qt::Orientations orientation() const;
-    void setOrientation(Qt::Orientations);
-
-    enum VerticalDirection{
-        TopToBottom,
-        BottomToTop
-    };
-
-    VerticalDirection verticalDirection() const;
-    void setVerticalDirection(VerticalDirection);
-    Qt::LayoutDirection horizontalDirection() const;
-    void setHorizontalDirection(Qt::LayoutDirection);
+  explicit ctkBasePopupWidget(QWidget *parent /TransferThis/ = 0);
+  virtual ~ctkBasePopupWidget();
+  QWidget *baseWidget() const;
+  AnimationEffect animationEffect() const;
+  void setAnimationEffect(AnimationEffect effect);
+  int effectDuration() const;
+  void setEffectDuration(int duration);
+  QEasingCurve::Type easingCurve() const;
+  void setEasingCurve(QEasingCurve::Type easingCurve);
+  Qt::Alignment alignment() const;
+  void setAlignment(Qt::Alignment alignment);
+  Qt::Orientations orientation() const;
+  void setOrientation(Qt::Orientations orientation);
+  VerticalDirection verticalDirection() const;
+  void setVerticalDirection(VerticalDirection direction);
+  Qt::LayoutDirection horizontalDirection() const;
+  void setHorizontalDirection(Qt::LayoutDirection direction);
 
 public slots:
-    virtual void hidePopup();
-    virtual void showPopup();
-    void showPopup(bool);
-
-signals:
-    void popupOpened(bool);
+  virtual void hidePopup();
+  virtual void showPopup();
+  void showPopup(bool show);
 
 protected:
-    double effectAlpha() const;
-    QRect effectGeometry() const;
+  double effectAlpha() const;
+  QRect effectGeometry() const;
+  virtual void setBaseWidget(QWidget *baseWidget);
+  virtual bool event(QEvent *event);
+  virtual void paintEvent(QPaintEvent *);
 
-    virtual void setBaseWidget(QWidget* baseWidget);
-    virtual bool event(QEvent* event);
-    virtual void paintEvent(QPaintEvent*);
+protected slots:
+  virtual void onEffectFinished();
+  void setEffectAlpha(double alpha);
+  void setEffectGeometry(QRect geometry);
+  void onBaseWidgetDestroyed();
+
+signals:
+  void popupOpened(bool open);
+
+private:
+  ctkBasePopupWidget(const ctkBasePopupWidget &);
+  ctkBasePopupWidget &operator=(const ctkBasePopupWidget &);
+
 };
+

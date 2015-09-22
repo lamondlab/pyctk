@@ -19,52 +19,46 @@
 
 =========================================================================*/
 
-class ctkDoubleSpinBox : public QWidget
-{
+class ctkDoubleSpinBox : public QWidget {
 
 %TypeHeaderCode
 #include "ctkDoubleSpinBox.h"
 %End
 
 public:
-  enum SetMode
-  {
-    SetAlways,
-    SetIfDifferent,
+  enum SetMode {
+    SetAlways=0,
+    SetIfDifferent=1,
   };
 
-  enum DecimalsOption
-  {
-    FixedDecimals = 0x000,
-    DecimalsByShortcuts = 0x001,
-    DecimalsByKey = 0x002,
-    DecimalsByValue = 0x004,
-    InsertDecimals = 0x008,
-    ReplaceDecimals = 0x010,
-    DecimalsAsMax = 0x020,
-    DecimalsAsMin = 0x040,
-    DecimalPointAlwaysVisible = 0x080
+  enum DecimalsOption {
+    FixedDecimals=0,
+    DecimalsByShortcuts=1,
+    DecimalsByKey=2,
+    DecimalsByValue=4,
+    InsertDecimals=8,
+    ReplaceDecimals=16,
+    DecimalsAsMax=32,
+    DecimalsAsMin=64,
+    DecimalPointAlwaysVisible=128,
   };
-  //Q_DECLARE_FLAGS(DecimalsOptions, DecimalsOption)
   typedef QFlags<ctkDoubleSpinBox::DecimalsOption> DecimalsOptions;
 
-  enum SizeHintPolicy
-  {
-    SizeHintByMinMax,
-    SizeHintByValue
+  enum SizeHintPolicy {
+    SizeHintByMinMax=0,
+    SizeHintByValue=1,
   };
 
-  explicit ctkDoubleSpinBox(QWidget* parent /TransferThis/ = 0);
-  explicit ctkDoubleSpinBox(ctkDoubleSpinBox::SetMode mode, QWidget* parent /TransferThis/ = 0);
+  explicit ctkDoubleSpinBox(QWidget *parent /TransferThis/ = 0);
+  explicit ctkDoubleSpinBox(ctkDoubleSpinBox::SetMode mode, QWidget *parent /TransferThis/ = 0);
   virtual ~ctkDoubleSpinBox();
-
   double value() const;
   double displayedValue() const;
   void setDisplayedValue(double displayValue);
   QString text() const;
   QString cleanText() const;
-  Qt::Alignment alignment () const;
-  void setAlignment (Qt::Alignment flag);
+  Qt::Alignment alignment() const;
+  void setAlignment(Qt::Alignment flag);
   void setFrame(bool frame);
   bool hasFrame() const;
   QString prefix() const;
@@ -80,8 +74,8 @@ public:
   void setRange(double min, double max);
   int decimals() const;
   double round(double value) const;
-  QDoubleSpinBox* spinBox() const;
-  QLineEdit* lineEdit()const;
+  QDoubleSpinBox *spinBox() const;
+  QLineEdit *lineEdit() const;
   ctkDoubleSpinBox::SetMode setMode() const;
   void setSetMode(SetMode mode);
   ctkDoubleSpinBox::DecimalsOptions decimalsOption();
@@ -89,13 +83,13 @@ public:
   void setInvertedControls(bool invertedControls);
   bool invertedControls() const;
   void setSizeHintPolicy(SizeHintPolicy newSizeHintPolicy);
-  SizeHintPolicy sizeHintPolicy()const;
-  void setValueProxy(ctkValueProxy* proxy);
-  ctkValueProxy* valueProxy() const;
-  virtual QSize sizeHint()const;
-  virtual QSize minimumSizeHint()const;
+  SizeHintPolicy sizeHintPolicy() const;
+  void setValueProxy(ctkValueProxy *proxy);
+  ctkValueProxy *valueProxy() const;
+  virtual QSize sizeHint() const;
+  virtual QSize minimumSizeHint() const;
 
-public Q_SLOTS:
+public slots:
   void setValue(double value);
   void setValueIfDifferent(double value);
   void setValueAlways(double value);
@@ -103,17 +97,19 @@ public Q_SLOTS:
   void stepDown();
   void setDecimals(int decimal);
 
-Q_SIGNALS:
-  void valueChanged(double);
+protected:
+  virtual void keyPressEvent(QKeyEvent *event);
+  virtual bool eventFilter(QObject *obj, QEvent *event);
+
+signals:
+  void valueChanged(double );
   void valueChanged(const QString &);
   void editingFinished();
-  void decimalsChanged(int);
-
-protected:
-  virtual void keyPressEvent(QKeyEvent* event);
-  virtual bool eventFilter(QObject *obj, QEvent *event);
+  void decimalsChanged(int );
 
 private:
   ctkDoubleSpinBox(const ctkDoubleSpinBox &);
-  ctkDoubleSpinBox &operator=(const ctkDoubleSpinBox &);  
+  ctkDoubleSpinBox &operator=(const ctkDoubleSpinBox &);
+
 };
+

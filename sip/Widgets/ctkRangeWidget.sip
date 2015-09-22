@@ -19,23 +19,21 @@
 
 =========================================================================*/
 
-class ctkRangeWidget : public QWidget
-{
+class ctkRangeWidget : public QWidget {
 
 %TypeHeaderCode
 #include "ctkRangeWidget.h"
 %End
 
 public:
-  explicit ctkRangeWidget(QWidget* parent /TransferThis/ = 0);
+  explicit ctkRangeWidget(QWidget *parent /TransferThis/ = 0);
   virtual ~ctkRangeWidget();
-
   virtual double minimum() const;
   virtual void setMinimum(double minimum);
   virtual double maximum() const;
   virtual void setMaximum(double maximum);
   virtual void setRange(double min, double max);
-  //virtual void range(double minimumAndMaximum[2]) const;
+  //virtual void range(double minimumAndMaximum) const;
   virtual double minimumValue() const;
   virtual double maximumValue() const;
   virtual void values(double &minValue, double &maxValue) const;
@@ -43,9 +41,9 @@ public:
   virtual void setSingleStep(double step);
   virtual int decimals() const;
   virtual QString prefix() const;
-  virtual void setPrefix(const QString& prefix);
+  virtual void setPrefix(const QString &prefix);
   virtual QString suffix() const;
-  virtual void setSuffix(const QString& suffix);
+  virtual void setSuffix(const QString &suffix);
   virtual double tickInterval() const;
   virtual void setTickInterval(double ti);
   virtual void setSpinBoxAlignment(Qt::Alignment alignment);
@@ -58,28 +56,24 @@ public:
   virtual void setAutoSpinBoxWidth(bool autoWidth);
   virtual bool symmetricMoves() const;
   virtual void setSymmetricMoves(bool symmetry);
-  virtual ctkDoubleRangeSlider* slider() const;
-  virtual ctkDoubleSpinBox* minimumSpinBox() const;
-  virtual ctkDoubleSpinBox* maximumSpinBox() const;
-  virtual void setValueProxy(ctkValueProxy* proxy);
-  virtual ctkValueProxy* valueProxy() const;
+  virtual ctkDoubleRangeSlider *slider() const;
+  virtual ctkDoubleSpinBox *minimumSpinBox() const;
+  virtual ctkDoubleSpinBox *maximumSpinBox() const;
+  virtual void setValueProxy(ctkValueProxy *proxy);
+  virtual ctkValueProxy *valueProxy() const;
 
-public Q_SLOTS:
+public slots:
   virtual void reset();
   virtual void setMinimumValue(double value);
   virtual void setMaximumValue(double value);
   virtual void setValues(double minValue, double maxValue);
   virtual void setDecimals(int decimals);
 
-Q_SIGNALS:
-  void minimumValueChanged(double value);
-  void minimumValueIsChanging(double value);
-  void maximumValueChanged(double value);
-  void maximumValueIsChanging(double value);
-  void valuesChanged(double minValue, double maxValue);
-  void rangeChanged(double min, double max);
+protected:
+  virtual bool eventFilter(QObject *obj, QEvent *event);
+  virtual void setSlider(ctkDoubleRangeSlider *slider);
 
-protected Q_SLOTS:
+protected slots:
   virtual void startChanging();
   virtual void stopChanging();
   virtual void changeValues(double newMinValue, double newMaxValue);
@@ -89,15 +83,20 @@ protected Q_SLOTS:
   virtual void setMinimumToMaximumSpinBox(double minimum);
   virtual void setMaximumToMinimumSpinBox(double maximum);
   virtual void onSliderRangeChanged(double min, double max);
-
   virtual void onValueProxyAboutToBeModified();
   virtual void onValueProxyModified();
 
-protected:
-  virtual bool eventFilter(QObject *obj, QEvent *event);
-  virtual void setSlider(ctkDoubleRangeSlider* slider);
+signals:
+  void minimumValueChanged(double value);
+  void minimumValueIsChanging(double value);
+  void maximumValueChanged(double value);
+  void maximumValueIsChanging(double value);
+  void valuesChanged(double minValue, double maxValue);
+  void rangeChanged(double min, double max);
 
 private:
   ctkRangeWidget(const ctkRangeWidget &);
   ctkRangeWidget &operator=(const ctkRangeWidget &);
+
 };
+

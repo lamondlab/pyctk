@@ -19,8 +19,7 @@
 
 =========================================================================*/
 
-class ctkCheckBox : public QCheckBox
-{
+class ctkCheckBox : public QCheckBox {
 
 %TypeHeaderCode
 #include "ctkCheckBox.h"
@@ -29,13 +28,14 @@ class ctkCheckBox : public QCheckBox
 public:
   ctkCheckBox(QWidget *_parent /TransferThis/ = 0);
   virtual ~ctkCheckBox();
-
-  void setIndicatorIcon(const QIcon& newIcon);
+  void setIndicatorIcon(const QIcon &newIcon);
   QIcon indicatorIcon() const;
-  void setIndicatorIconSize(const QSize& newSize);
+  void setIndicatorIconSize(const QSize &newSize);
   QSize indicatorIconSize() const;
 
 private:
   ctkCheckBox(const ctkCheckBox &);
-  ctkCheckBox &operator=(const ctkCheckBox &);  
+  ctkCheckBox &operator=(const ctkCheckBox &);
+
 };
+

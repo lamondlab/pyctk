@@ -19,21 +19,19 @@
 
 =========================================================================*/
 
-class ctkCoordinatesWidget : public QWidget
-{
+class ctkCoordinatesWidget : public QWidget {
 
 %TypeHeaderCode
 #include "ctkCoordinatesWidget.h"
 %End
 
 public:
-  explicit ctkCoordinatesWidget(QWidget* parent /TransferThis/ = 0);
+  explicit ctkCoordinatesWidget(QWidget *parent /TransferThis/ = 0);
   virtual ~ctkCoordinatesWidget();
-
   void setDimension(int dim);
   int dimension() const;
   int decimals() const;
-  ctkDoubleSpinBox::DecimalsOptions decimalsOption()const;
+  ctkDoubleSpinBox::DecimalsOptions decimalsOption() const;
   void setDecimalsOption(ctkDoubleSpinBox::DecimalsOptions option);
   void setSingleStep(double step);
   double singleStep() const;
@@ -43,32 +41,34 @@ public:
   double maximum() const;
   void setRange(double minimum, double maximum);
   void setNormalized(bool normalize);
-  bool isNormalized()const;
-  double norm()const;
-  double squaredNorm()const;
+  bool isNormalized() const;
+  double norm() const;
+  double squaredNorm() const;
   void setCoordinatesAsString(QString pos);
-  QString coordinatesAsString()const;
-  void setCoordinates(double* pos);
-  //double const * coordinates()const;
-  void setCoordinates(double x, double y = 0., double z = 0., double w = 0.);
+  QString coordinatesAsString() const;
+  void setCoordinates(double *pos);
+  //double const *coordinates() const;
+  void setCoordinates(double x, double y = 0, double z = 0, double w = 0);
   void setSizeHintPolicy(ctkDoubleSpinBox::SizeHintPolicy newSizeHintPolicy);
-  ctkDoubleSpinBox::SizeHintPolicy sizeHintPolicy()const;
-  void setValueProxy(ctkValueProxy* proxy);
-  ctkValueProxy* valueProxy() const;
-  ctkDoubleSpinBox* spinBox(int id);
+  ctkDoubleSpinBox::SizeHintPolicy sizeHintPolicy() const;
+  void setValueProxy(ctkValueProxy *proxy);
+  ctkValueProxy *valueProxy() const;
+  ctkDoubleSpinBox *spinBox(int id);
 
-public Q_SLOTS:
+public slots:
   void normalize();
   void setDecimals(int decimals);
 
-Q_SIGNALS:
-  //void coordinatesChanged(double* pos);
-
-protected Q_SLOTS:
+protected slots:
   void updateCoordinates();
   void updateCoordinate(double coordinate);
 
+signals:
+  //void coordinatesChanged(double *pos);
+
 private:
   ctkCoordinatesWidget(const ctkCoordinatesWidget &);
-  ctkCoordinatesWidget &operator=(const ctkCoordinatesWidget &);  
+  ctkCoordinatesWidget &operator=(const ctkCoordinatesWidget &);
+
 };
+

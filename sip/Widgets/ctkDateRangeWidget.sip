@@ -19,24 +19,22 @@
 
 =========================================================================*/
 
-class ctkDateRangeWidget : public QWidget
-{
+class ctkDateRangeWidget : public QWidget {
 
 %TypeHeaderCode
 #include "ctkDateRangeWidget.h"
 %End
 
 public:
-  explicit ctkDateRangeWidget(QWidget* parent /TransferThis/ = 0);
+  explicit ctkDateRangeWidget(QWidget *parent /TransferThis/ = 0);
   virtual ~ctkDateRangeWidget();
-
   void setDisplayTime(bool includeTime);
-  bool displayTime()const;
+  bool displayTime() const;
   QDateTime startDateTime() const;
   QDateTime endDateTime() const;
-  bool isAnyDate()const;
+  bool isAnyDate() const;
 
-public Q_SLOTS:
+public slots:
   void setStartDateTime(QDateTime start);
   void setEndDateTime(QDateTime end);
   void setDateTimeRange(QDateTime start, QDateTime end);
@@ -48,14 +46,16 @@ public Q_SLOTS:
   void setLastMonth();
   void setSelectRange();
 
-Q_SIGNALS:
-  void startDateTimeChanged(const QDateTime& value);
-  void endDateTimeChanged(const QDateTime& value);
-
-protected Q_SLOTS:
+protected slots:
   void onDateTimeChanged();
+
+signals:
+  void startDateTimeChanged(const QDateTime &value);
+  void endDateTimeChanged(const QDateTime &value);
 
 private:
   ctkDateRangeWidget(const ctkDateRangeWidget &);
-  ctkDateRangeWidget &operator=(const ctkDateRangeWidget &);  
+  ctkDateRangeWidget &operator=(const ctkDateRangeWidget &);
+
 };
+

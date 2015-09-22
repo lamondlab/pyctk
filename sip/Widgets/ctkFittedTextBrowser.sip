@@ -19,24 +19,25 @@
 
 =========================================================================*/
 
-class ctkFittedTextBrowser : public QTextBrowser
-{
+class ctkFittedTextBrowser : public QTextBrowser {
 
 %TypeHeaderCode
 #include "ctkFittedTextBrowser.h"
 %End
 
 public:
-  ctkFittedTextBrowser(QWidget* parent /TransferThis/ = 0);
+  ctkFittedTextBrowser(QWidget *parent /TransferThis/ = 0);
   virtual ~ctkFittedTextBrowser();
-
   virtual QSize sizeHint() const;
   virtual QSize minimumSizeHint() const;
   virtual int heightForWidth(int width) const;
 
-protected Q_SLOTS:
+protected:
+  virtual void resizeEvent(QResizeEvent *e);
+
+protected slots:
   void heightForWidthMayHaveChanged();
 
-protected:
-  virtual void resizeEvent(QResizeEvent* e);
+
 };
+

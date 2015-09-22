@@ -19,43 +19,42 @@
 
 =========================================================================*/
 
-class ctkThumbnailListWidget : public QWidget
-{
+class ctkThumbnailListWidget : public QWidget {
 
 %TypeHeaderCode
 #include "ctkThumbnailListWidget.h"
 %End
 
 public:
-  explicit ctkThumbnailListWidget(QWidget* parent /TransferThis/ = 0);
+  explicit ctkThumbnailListWidget(QWidget *parent /TransferThis/ = 0);
   virtual ~ctkThumbnailListWidget();
-
-  void addThumbnail(const QPixmap& thumbnail, const QString& label = QString());
-  void addThumbnails(const QList<QPixmap>& thumbnails);
+  void addThumbnail(const QPixmap &thumbnail, const QString &label = QString());
+  void addThumbnails(const QList<QPixmap> &thumbnails);
   void setCurrentThumbnail(int index);
   int currentThumbnail();
   void clearThumbnails();
   void setFlow(Qt::Orientation orientation);
-  Qt::Orientation flow()const;
-  QSize thumbnailSize()const;
-  virtual bool eventFilter(QObject* watched, QEvent* event);
+  Qt::Orientation flow() const;
+  QSize thumbnailSize() const;
+  virtual bool eventFilter(QObject *watched, QEvent *event);
 
-public Q_SLOTS:
+public slots:
   void setThumbnailSize(QSize size);
 
-Q_SIGNALS:
-  void selected(const ctkThumbnailLabel& widget);
-  void doubleClicked(const ctkThumbnailLabel& widget);
+protected:
+  virtual void resizeEvent(QResizeEvent *event);
 
-protected Q_SLOTS:
-  void onThumbnailSelected(const ctkThumbnailLabel& widget);
+protected slots:
+  void onThumbnailSelected(const ctkThumbnailLabel &widget);
   void updateLayout();
 
-protected:
-  virtual void resizeEvent(QResizeEvent* event);
+signals:
+  void selected(const ctkThumbnailLabel &widget);
+  void doubleClicked(const ctkThumbnailLabel &widget);
 
 private:
   ctkThumbnailListWidget(const ctkThumbnailListWidget &);
   ctkThumbnailListWidget &operator=(const ctkThumbnailListWidget &);
 
 };
+

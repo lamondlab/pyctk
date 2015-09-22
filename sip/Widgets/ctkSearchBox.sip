@@ -19,8 +19,7 @@
 
 =========================================================================*/
 
-class ctkSearchBox : public QLineEdit
-{
+class ctkSearchBox : public QLineEdit {
 
 %TypeHeaderCode
 #include "ctkSearchBox.h"
@@ -29,26 +28,27 @@ class ctkSearchBox : public QLineEdit
 public:
   ctkSearchBox(QWidget *parent /TransferThis/ = 0);
   virtual ~ctkSearchBox();
-
   void setShowSearchIcon(bool show);
-  bool showSearchIcon()const;
+  bool showSearchIcon() const;
   void setAlwaysShowClearIcon(bool show);
-  bool alwaysShowClearIcon()const;
-  void setSearchIcon(const QIcon& icon);
-  QIcon searchIcon()const;
-  void setClearIcon(const QIcon& icon);
-  QIcon clearIcon()const;
-
-protected Q_SLOTS:
-  void updateClearButtonState();
+  bool alwaysShowClearIcon() const;
+  void setSearchIcon(const QIcon &icon);
+  QIcon searchIcon() const;
+  void setClearIcon(const QIcon &icon);
+  QIcon clearIcon() const;
 
 protected:
-  virtual void paintEvent(QPaintEvent*);
-  virtual void mousePressEvent(QMouseEvent* event);
+  virtual void paintEvent(QPaintEvent *);
+  virtual void mousePressEvent(QMouseEvent *event);
   virtual void mouseMoveEvent(QMouseEvent *event);
-  virtual void resizeEvent(QResizeEvent * event);
+  virtual void resizeEvent(QResizeEvent *event);
+
+protected slots:
+  void updateClearButtonState();
 
 private:
   ctkSearchBox(const ctkSearchBox &);
   ctkSearchBox &operator=(const ctkSearchBox &);
+
 };
+

@@ -1,0 +1,22 @@
+- ctkCoordinateWidget.sip:50 -> remove references to 'double const *'
+- ctkHistogram.sip -> remove '%Include ctkControlPoint.sip'
+- ctkWorkflowWidgetStep.sip:22 -> remove '%Include ctkWorkflowStep.sip'
+- ctkCheckableHeaderView.sip:35 -> Issues with overloads and determining a unique python signature
+  ctkCheckableModelHelper.sip:40-41
+  ctkCheckBoxPixmaps.sip:33
+  ctkTransferFunction:33,38,42 -> (array type ignored by sipify)
+  ctkScreenshotDialog.sip:39
+- ctkCoordinateWidget.sip:68 -> remove references to 'double *'
+- ctkLayoutManager.sip -> add '%Include ctkLayoutManagerPrivate.sip'
+- ctkTransferFunctionRepresentation.sip:61-64 -> remove references to 'double []'
+- ctkTestApplication.sip -> Need to add a lot of support code!
+- ctkRangeWidget.sip:36 -> remove reference to 'double []'
+- ctkPathListWidget.sip -> add 'private: void setModel(QAbstractItemModel *model);'
+- ctkDoubleSpinBox.sip:53 -> constructor arg 'int mode' should be 'ctkDoubleSpinBox::SetMode mode'
+- ctkCheckableComboBox:38 -> remove reference to 'ctkCheckableModelHelper'
+- ctkHistogram.sip:40 -> need to add '=0' to 'virtual void build();' declaration
+- ctkLayoutManager.sip:52 -> need to add '=0' to 'virtual QWidget *viewFromXML(QDomElement layoutElement);' declaration
+- ctkTransferFunction.sip -> need to add '=0' to all public functions except constructor, destructor and 'representation();'
+- ctkQImageView.sip:42 -> Remove reference to 'int numberOfSlices() const;'
+- ctkTransferFunctionItem:40-41 -> remove references to 'color(...);'
+- ctkWorkflowAbstractPagedWidget.sip:40-43 -> need to add '=0'

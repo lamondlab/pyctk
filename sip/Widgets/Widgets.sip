@@ -40,6 +40,7 @@ initCtkWidgetsResources();
 %Include ctkActionsWidget.sip
 %Include ctkAddRemoveComboBox.sip
 %Include ctkAxesWidget.sip
+%Include ctkBasePopupWidget.sip
 %Include ctkButtonGroup.sip
 %Include ctkCheckableComboBox.sip
 %Include ctkCheckableHeaderView.sip
@@ -72,11 +73,9 @@ initCtkWidgetsResources();
 %Include ctkFlowLayout.sip
 %Include ctkFontButton.sip
 %Include ctkHistogram.sip
-%Include ctkIconEnginePlugin.sip
 %Include ctkLanguageComboBox.sip
 %Include ctkLayoutFactory.sip
 %Include ctkLayoutManager.sip
-%Include ctkLayoutManagerPrivate.sip
 %Include ctkLayoutViewFactory.sip
 %Include ctkMaterialPropertyPreviewLabel.sip
 %Include ctkMaterialPropertyWidget.sip
@@ -88,9 +87,7 @@ initCtkWidgetsResources();
 %Include ctkPathLineEdit.sip
 %Include ctkPathListButtonsWidget.sip
 %Include ctkPathListWidget.sip
-%Include ctkPixmapIconEngine.sip
 %Include ctkPopupWidget.sip
-//%Include ctkProxyStyle.sip
 %Include ctkPushButton.sip
 %Include ctkQImageView.sip
 %Include ctkRangeSlider.sip
@@ -100,7 +97,6 @@ initCtkWidgetsResources();
 %Include ctkSettings.sip
 %Include ctkSettingsDialog.sip
 %Include ctkSettingsPanel.sip
-//%Include ctkSignalMapper.sip
 %Include ctkSizeGrip.sip
 %Include ctkSliderWidget.sip
 %Include ctkTemplateWidget.sip
@@ -113,7 +109,6 @@ initCtkWidgetsResources();
 %Include ctkTransferFunctionControlPointsItem.sip
 %Include ctkTransferFunctionGradientItem.sip
 %Include ctkTransferFunctionItem.sip
-//%Include ctkTransferFunctionNativeItem.sip
 %Include ctkTransferFunctionRepresentation.sip
 %Include ctkTransferFunctionScene.sip
 %Include ctkTransferFunctionView.sip

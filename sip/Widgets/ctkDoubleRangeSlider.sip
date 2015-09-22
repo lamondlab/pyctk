@@ -19,28 +19,26 @@
 
 =========================================================================*/
 
-class ctkDoubleRangeSlider : public QWidget
-{
+class ctkDoubleRangeSlider : public QWidget {
 
 %TypeHeaderCode
 #include "ctkDoubleRangeSlider.h"
 %End
 
 public:
-  ctkDoubleRangeSlider( Qt::Orientation o, QWidget* par /TransferThis/ = 0 );
-  ctkDoubleRangeSlider( QWidget* par /TransferThis/ = 0 );
+  ctkDoubleRangeSlider(Qt::Orientation o, QWidget *par = 0);
+  ctkDoubleRangeSlider(QWidget *par = 0);
   virtual ~ctkDoubleRangeSlider();
-  
   void setSingleStep(double ss);
-  double singleStep()const;
-  bool isValidStep(double step)const;
+  double singleStep() const;
+  bool isValidStep(double step) const;
   void setTickInterval(double ti);
-  double tickInterval()const;
+  double tickInterval() const;
   void setTickPosition(QSlider::TickPosition position);
-  QSlider::TickPosition tickPosition()const;
-  double minimum()const;
+  QSlider::TickPosition tickPosition() const;
+  double minimum() const;
   void setMinimum(double min);
-  double maximum()const;
+  double maximum() const;
   void setMaximum(double max);
   void setRange(double min, double max);
   double minimumValue() const;
@@ -51,16 +49,34 @@ public:
   void setMaximumPosition(double maxPos);
   void setPositions(double minPos, double maxPos);
   void setTracking(bool enable);
-  bool hasTracking()const;
+  bool hasTracking() const;
   void triggerAction(QAbstractSlider::SliderAction action);
-  Qt::Orientation orientation()const;
+  Qt::Orientation orientation() const;
   void setOrientation(Qt::Orientation orientation);
-  bool symmetricMoves()const; 
+  bool symmetricMoves() const;
   void setSymmetricMoves(bool symmetry);
-  void setValueProxy(ctkValueProxy* proxy);
-  ctkValueProxy* valueProxy() const;
+  void setValueProxy(ctkValueProxy *proxy);
+  ctkValueProxy *valueProxy() const;
 
-Q_SIGNALS:
+public slots:
+  void setMinimumValue(double minVal);
+  void setMaximumValue(double maxVal);
+  void setValues(double minVal, double maxVal);
+
+protected:
+  ctkRangeSlider *slider() const;
+  void setSlider(ctkRangeSlider *slider);
+
+protected slots:
+  void onValuesChanged(int min, int max);
+  void onMinPosChanged(int value);
+  void onMaxPosChanged(int value);
+  void onPositionsChanged(int min, int max);
+  void onRangeChanged(int min, int max);
+  void onValueProxyAboutToBeModified();
+  void onValueProxyModified();
+
+signals:
   void minimumValueChanged(double minVal);
   void maximumValueChanged(double maxVal);
   void valuesChanged(double minVal, double maxVal);
@@ -71,25 +87,9 @@ Q_SIGNALS:
   void sliderReleased();
   void rangeChanged(double min, double max);
 
-public Q_SLOTS:
-  void setMinimumValue(double minVal);
-  void setMaximumValue(double maxVal);
-  void setValues(double minVal, double maxVal);
-
-protected Q_SLOTS:
-  void onValuesChanged(int min, int max);
-  void onMinPosChanged(int value);
-  void onMaxPosChanged(int value);
-  void onPositionsChanged(int min, int max);
-  void onRangeChanged(int min, int max);
-  void onValueProxyAboutToBeModified();
-  void onValueProxyModified();
-
-protected:
-  ctkRangeSlider* slider()const;
-  void setSlider(ctkRangeSlider* slider);
-
 private:
   ctkDoubleRangeSlider(const ctkDoubleRangeSlider &);
   ctkDoubleRangeSlider &operator=(const ctkDoubleRangeSlider &);
+
 };
+

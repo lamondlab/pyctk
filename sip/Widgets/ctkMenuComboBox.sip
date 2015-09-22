@@ -19,56 +19,56 @@
 
 =========================================================================*/
 
-class ctkMenuComboBox : public QWidget
-{
+class ctkMenuComboBox : public QWidget {
 
 %TypeHeaderCode
 #include "ctkMenuComboBox.h"
 %End
 
 public:
-  enum EditableBehavior{
-    NotEditable = 0,
-    Editable,
-    EditableOnFocus,
-    EditableOnPopup
+  enum EditableBehavior {
+    NotEditable=0,
+    Editable=1,
+    EditableOnFocus=2,
+    EditableOnPopup=3,
   };
 
-  ctkMenuComboBox(QWidget* parent /TransferThis/ = 0);
+  ctkMenuComboBox(QWidget *parent /TransferThis/ = 0);
   virtual ~ctkMenuComboBox();
-
-  void setMenu(QMenu* menu);
-  QMenu* menu()const;
-  void setDefaultText(const QString&);
-  QString defaultText()const;
-  void setDefaultIcon(const QIcon&);
-  QIcon defaultIcon()const;
+  void setMenu(QMenu *menu);
+  QMenu *menu() const;
+  void setDefaultText(const QString &);
+  QString defaultText() const;
+  void setDefaultIcon(const QIcon &);
+  QIcon defaultIcon() const;
   void setEditableBehavior(EditableBehavior editBehavior);
-  EditableBehavior editableBehavior()const;
+  EditableBehavior editableBehavior() const;
   void setSearchIconVisible(bool state);
   bool isSearchIconVisible() const;
   Qt::ToolButtonStyle toolButtonStyle() const;
   void setMinimumContentsLength(int characters);
-  QComboBox* menuComboBoxInternal() const;
-  QToolButton* toolButtonInternal() const;
-  ctkCompleter* searchCompleter() const;
+  QComboBox *menuComboBoxInternal() const;
+  QToolButton *toolButtonInternal() const;
+  ctkCompleter *searchCompleter() const;
 
-protected:
-  virtual bool eventFilter(QObject* target, QEvent* event);
-
-public Q_SLOTS:
+public slots:
   void clearActiveAction();
   void setToolButtonStyle(Qt::ToolButtonStyle style);
 
-Q_SIGNALS:
-  void actionChanged(QAction* action);
-  void popupShown();
+protected:
+  virtual bool eventFilter(QObject *target, QEvent *event);
 
-protected Q_SLOTS:
-  void onActionSelected(QAction* action);
+protected slots:
+  void onActionSelected(QAction *action);
   void onEditingFinished();
+
+signals:
+  void actionChanged(QAction *action);
+  void popupShown();
 
 private:
   ctkMenuComboBox(const ctkMenuComboBox &);
-  ctkMenuComboBox &operator=(const ctkMenuComboBox &);  
+  ctkMenuComboBox &operator=(const ctkMenuComboBox &);
+
 };
+
